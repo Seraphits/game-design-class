@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import FlashCard from './Game/FlashCard'
+import FlashCard from './Game/FlashCards/FlashCardsPage'
 import FloppyBird from './Game/FloppyBird'
 import Header from './Layout/Header'
 import GamesList from './Pages/GamesList'
