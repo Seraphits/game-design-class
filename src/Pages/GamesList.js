@@ -13,6 +13,7 @@ const GamesList = () => {
       Game that are being worked on
       <Grid>
         <Link to='/games/flashcards'>Flash Cards</Link>
+        <Link to='/games/memory'>Memory Game</Link>
       </Grid>
     </div>
   )

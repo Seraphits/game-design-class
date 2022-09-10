@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components';
-import FlashCard from './FlashCard';
+// import FlashCard from './FlashCard';
 
 const FlashCardList = ({flashcards}) => {
   return (
     <div>
       {/* FlashCardList */}
       {/* <FlashCard/> */}
-      <Grid>
+      {/* <Grid>
         {flashcards.map(flashcard => {
           return <FlashCard flashcard={flashcard} key={flashcard.id} />
         })}
-      </Grid>
+      </Grid> */}
     </div>
   )
 }
