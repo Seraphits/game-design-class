@@ -8,12 +8,12 @@ const GamesList = () => {
       Game List
       Game that are done
       <Grid>
-        <Link to='/games/floppybird'>Floppy Bird 9/9/2020</Link>
+        <Link to='/games/memory'>Memory Game 9/10/2022</Link>
+        <Link to='/games/floppybird'>Floppy Bird 9/9/2022</Link>
       </Grid>
       Game that are being worked on
       <Grid>
         <Link to='/games/flashcards'>Flash Cards</Link>
-        <Link to='/games/memory'>Memory Game</Link>
       </Grid>
     </div>
   )
