@@ -6,12 +6,14 @@ const GamesList = () => {
   return (
     <div>
       Game List
+      Game that are done
       <Grid>
-        <Link to='/games/floppybird'>Floppy Bird</Link>
-        <Link to='/games/flashcards'>Flash Cards</Link>
-
+        <Link to='/games/floppybird'>Floppy Bird 9/9/2020</Link>
       </Grid>
-
+      Game that are being worked on
+      <Grid>
+        <Link to='/games/flashcards'>Flash Cards</Link>
+      </Grid>
     </div>
   )
 }
