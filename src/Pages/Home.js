@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components';
+import { Wrapper } from '../UI/Utility';
 
 const Home = () => {
   return (
@@ -21,8 +21,4 @@ const Home = () => {
 
 export default Home
 
-const Wrapper = styled.div`
-  /* text-align: center;
-  color: aliceblue; */
-  margin: 2rem;
-`;
+
