@@ -25,7 +25,7 @@ img{
 }
 
 .unmatch{
-    background-color: rgb(240, 28, 28);
+    /* background-color: rgb(240, 28, 28); */
     border-radius: 5px;
     animation: 2s hideCard linear;
 }
