@@ -15,6 +15,11 @@ const Home = () => {
         </ul>
       </ol>
       <p>Now, is 2022, I feel like I am relearning React JS, after not useing it for a few years. Last time I used React JS, I used all class-based component and lifecycle.  Now everything is functional components with hooks.</p>
+      <p>Why I chose to organize this site this way?</p>
+      <ol>
+        <li>track my progress and learning</li>
+        <li> easily test different functionality to decide which I want to move into the next phase of development </li>
+      </ol>
     </Wrapper>
   )
 }
