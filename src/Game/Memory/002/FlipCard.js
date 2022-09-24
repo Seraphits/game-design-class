@@ -1,27 +1,31 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const FlipCard = ({card, handleChoice, flipped }) => {
+const FlipCard = ({card, handleChoice, disabled }) => {
 
   const handleClick = () => {
-    // console.log("handleClick" + card);
-
-    handleChoice(card)
-    console.log(flipped);
+    if (!disabled) {
+      handleChoice(card)
+    }
   }
 
   return (
     <div>
-      <div key={card.id}>
-        <Front variant={card.flipped} >{card.letter}<br/>{card.flipped} </Front>
-        <Back variant={card.flipped}onClick={ handleClick }><Tabla/></Back>
-      </div>
+      <CardHolder variant={card.matched} key={card.id}>
+        <Front variant={card.flipped} >{card.letter}</Front>
+        <Back variant={card.flipped} onClick={ handleClick }><Tabla/></Back>
+      </CardHolder>
     </div>
   )
 }
 
 export default FlipCard
 
+const CardHolder = styled.div`
+  /* display:  none; */
+  display: ${(props) => props.variant === "true" ? "none" : "grid"};
+  /* opacity: .5; */
+`;
 const Card = styled.div`
   width: 200px;
   height: 200px;
@@ -35,13 +39,12 @@ const Card = styled.div`
 `;
 const Front = styled(Card)`
   color: white;
-  color: ${(props) => props.variant == "true" ? "pink" : "yellow"};
+  /* color: ${(props) => props.variant === "true" ? "pink" : "yellow"}; */
   font-size: 4rem;
   display: ${(props) => props.variant === "false" ? "none" : "grid"};
 `;
 const Back = styled(Card)`
  display: ${(props) => props.variant === "true" ? "none" : "grid"};
-
 `;
 const Tabla = styled.div`
 position: relative;

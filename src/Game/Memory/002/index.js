@@ -8,13 +8,13 @@ const MG002 = () => {
   const [turns, setTurns] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
-  // const [flipped, setFlipped] = useState("false")
+  const [disabled, setDisabled] = useState(false)
 
   // shuffle cards for new game
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
-      .map(card => ({ ...card, id: Math.random(), matched: false, flipped: "false" }))
+      .map(card => ({ ...card, id: Math.random(), matched: "false", flipped: "false" }))
 
     setCards(shuffledCards)
     setTurns(0)
@@ -46,10 +46,9 @@ const MG002 = () => {
             }
           })
         })
-
       }
     }
-  }, [choiceOne, choiceTwo])
+  }, [choiceOne])
 // set flipped2
 useEffect(() => {
   // console.log("Comparing Cards");
@@ -61,38 +60,37 @@ useEffect(() => {
         return prevCards.map(card => {
           if (card.id === choiceTwo.id) {
             console.log("Clicked 2");
-            return {...card,  flipped: "true"}
+            return {...card, flipped: "true"}
           } else {
             console.log("set rest 2");
             return card
           }
         })
       })
-
     }
   }
-}, [choiceOne, choiceTwo])
+}, [choiceTwo])
 
   // Compare 2 Selected Cards
   useEffect(() => {
-    // console.log("Comparing Cards");
+
     if (choiceOne && choiceTwo) {
-      // console.log("Two Picked");
+      setDisabled(true);
       if (choiceOne.letter === choiceTwo.letter) {
         console.log("match");
         setCards(prevCards => {
           return prevCards.map(card => {
             if (card.letter === choiceOne.letter) {
-              return {...card, matched: true}
+              return {...card, matched: "true"}
             } else {
               return card
             }
           })
         })
-        resetTurn()
+        setTimeout(() => resetTurn(), 1000 )
       } else {
         console.log("No Match");
-        resetTurn()
+        setTimeout(() => resetTurn(), 1000 )
       }
     }
   }, [choiceOne, choiceTwo])
@@ -104,7 +102,14 @@ useEffect(() => {
     setChoiceOne(null)
     setChoiceTwo(null)
     setTurns(prevTurns => prevTurns + 1)
+    setCards(prevCards => {
+      return prevCards.map(card => {
+          return {...card, flipped: "false"}
+      })
+    })
+    setDisabled(false)
   }
+  console.log(cards);
 
   // console.log("carsd:" + cards);
   return (
@@ -115,11 +120,12 @@ useEffect(() => {
         {cards.map(card => (
           <FlipCard key={card.id} card={card}
             handleChoice={handleChoice}
-            // flipped={flipped}
+            disabled={disabled}
             // flipped={card === choiceOne || card === choiceTwo || card.matched }
           />
         ) )}
       </CardGrid>
+      <p>Turns: {turns} </p>
     </div>
   )
 }
