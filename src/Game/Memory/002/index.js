@@ -8,30 +8,87 @@ const MG002 = () => {
   const [turns, setTurns] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
+  // const [flipped, setFlipped] = useState("false")
 
   // shuffle cards for new game
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
-      .map(card => ({ ...card, id: Math.random() }))
+      .map(card => ({ ...card, id: Math.random(), matched: false, flipped: "false" }))
 
     setCards(shuffledCards)
     setTurns(0)
   }
 
   // handle a choice
-  const handleChoice = (card) => {
-    console.log("handleChoice" + card);
+  const handleChoice = (card, matched) => {
+    console.log(matched);
+    console.log( card);
+    console.log( turns);
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
   }
 
+  // set flipped1
+  useEffect(() => {
+    // console.log("Comparing Cards");
+    if (choiceOne ) {
+      // console.log("Two Picked");
+      if (choiceOne) {
+        console.log("Clicked");
+        setCards(prevCards => {
+          return prevCards.map(card => {
+            if (card.id === choiceOne.id) {
+              console.log("Clicked 1");
+              return {...card,  flipped: "true"}
+            } else {
+              console.log("Set rest 1");
+              return card
+            }
+          })
+        })
+
+      }
+    }
+  }, [choiceOne, choiceTwo])
+// set flipped2
+useEffect(() => {
+  // console.log("Comparing Cards");
+  if (choiceTwo) {
+    // console.log("Two Picked");
+    if (choiceTwo) {
+      console.log("Clicked");
+      setCards(prevCards => {
+        return prevCards.map(card => {
+          if (card.id === choiceTwo.id) {
+            console.log("Clicked 2");
+            return {...card,  flipped: "true"}
+          } else {
+            console.log("set rest 2");
+            return card
+          }
+        })
+      })
+
+    }
+  }
+}, [choiceOne, choiceTwo])
+
   // Compare 2 Selected Cards
   useEffect(() => {
-    console.log("Comparing Cards");
+    // console.log("Comparing Cards");
     if (choiceOne && choiceTwo) {
-      console.log("Two Picked");
+      // console.log("Two Picked");
       if (choiceOne.letter === choiceTwo.letter) {
         console.log("match");
+        setCards(prevCards => {
+          return prevCards.map(card => {
+            if (card.letter === choiceOne.letter) {
+              return {...card, matched: true}
+            } else {
+              return card
+            }
+          })
+        })
         resetTurn()
       } else {
         console.log("No Match");
@@ -40,6 +97,8 @@ const MG002 = () => {
     }
   }, [choiceOne, choiceTwo])
 
+  // console.log(cards);
+
   // Reset choices & choice
   const resetTurn = () => {
     setChoiceOne(null)
@@ -47,7 +106,7 @@ const MG002 = () => {
     setTurns(prevTurns => prevTurns + 1)
   }
 
-  console.log("carsd:" + cards);
+  // console.log("carsd:" + cards);
   return (
     <div>
       <h1>Merory Game 2</h1>
@@ -56,6 +115,8 @@ const MG002 = () => {
         {cards.map(card => (
           <FlipCard key={card.id} card={card}
             handleChoice={handleChoice}
+            // flipped={flipped}
+            // flipped={card === choiceOne || card === choiceTwo || card.matched }
           />
         ) )}
       </CardGrid>
@@ -73,10 +134,10 @@ const CardGrid = styled.div`
 
 
 const cardImages = [
-  { "id": "A", "letter": "A" },
-  { "id": "B", "letter": "B" },
-  { "id": "C", "letter": "C" },
-  { "id": "D", "letter": "D" },
-  { "id": "E", "letter": "E" },
-  { "id": "F", "letter": "F" },
+  { "ID": "A", "letter": "A" },
+  { "ID": "B", "letter": "B" },
+  { "ID": "C", "letter": "C" },
+  { "ID": "D", "letter": "D" },
+  { "ID": "E", "letter": "E" },
+  { "ID": "F", "letter": "F" },
 ]

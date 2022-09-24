@@ -1,18 +1,20 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const FlipCard = ({card, handleChoice}) => {
+const FlipCard = ({card, handleChoice, flipped }) => {
 
   const handleClick = () => {
-    console.log("handleClick" + card);
+    // console.log("handleClick" + card);
+
     handleChoice(card)
+    console.log(flipped);
   }
 
   return (
     <div>
       <div key={card.id}>
-        <Front>{card.letter}</Front>
-        <Back onClick={ handleClick }><Tabla/></Back>
+        <Front variant={card.flipped} >{card.letter}<br/>{card.flipped} </Front>
+        <Back variant={card.flipped}onClick={ handleClick }><Tabla/></Back>
       </div>
     </div>
   )
@@ -33,10 +35,12 @@ const Card = styled.div`
 `;
 const Front = styled(Card)`
   color: white;
-  color: white;
+  color: ${(props) => props.variant == "true" ? "pink" : "yellow"};
   font-size: 4rem;
+  display: ${(props) => props.variant === "false" ? "none" : "grid"};
 `;
 const Back = styled(Card)`
+ display: ${(props) => props.variant === "true" ? "none" : "grid"};
 
 `;
 const Tabla = styled.div`
