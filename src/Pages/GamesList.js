@@ -9,13 +9,13 @@ const GamesList = () => {
       <h1>Game List</h1>
       <h2>Game test that are done</h2>
       <Grid>
+        <Link to='/games/memory/002'>Memory Game 2<br/>9/24/2022</Link>
         <Link to='/games/memory/001'>Memory Game<br/>9/10/2022</Link>
         <Link to='/games/floppybird'>Floppy Bird<br/>9/9/2022</Link>
       </Grid>
       <h2>Game test that are being worked on</h2>
       <Grid>
         <Link to='/games/flashcards'>Flash Cards</Link>
-        <Link to='/games/memory/002'>Memory Game 2</Link>
         {/* <Link to='/games/memory/003'>Memory Game 3</Link> */}
       </Grid>
     </Wrapper>
