@@ -15,6 +15,7 @@ const GamesList = () => {
       </Grid>
       <h2>Game test that are being worked on</h2>
       <Grid>
+        <Link to='/games/tabla'>Tabla</Link>
         <Link to='/games/flashcards'>Flash Cards</Link>
         {/* <Link to='/games/memory/003'>Memory Game 3</Link> */}
       </Grid>
