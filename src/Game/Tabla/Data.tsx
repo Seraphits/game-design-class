@@ -1,12 +1,3 @@
-import React from 'react'
-import styled from 'styled-components'
-
-export const Tabla = () => {
-  return (
-    <div>Tabla</div>
-  )
-}
-
 const Tabla_Sounds = [
   {
     "english": "TA",
