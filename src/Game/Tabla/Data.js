@@ -48,3 +48,5 @@ const Tabla_Sounds = [
     "hindi": "घ"
   }
 ]
+
+export default Tabla_Sounds;
