@@ -13,7 +13,7 @@ const Tabla_Questions = [
   {
     question: "TU",
     options: [
-      {id: 0, option: "तू", isCorrect: True},
+      {id: 0, option: "तू", isCorrect: true},
       {id: 1, option: "तेटे", isCorrect: false},
       {id: 2, option: "ना", isCorrect: false},
       {id: 3, option: "घ", isCorrect: false},
@@ -89,4 +89,4 @@ const Tabla_Questions = [
   }
 ]
 
-export default Tabla_Sounds;
+export default Tabla_Questions;

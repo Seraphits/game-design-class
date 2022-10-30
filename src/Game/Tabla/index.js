@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import TablaData from "./Data";
+// import TablaData from "./Data";
+import TablaData from "./questions";
 import { FinalResults } from './FinalResults';
 import { Header } from './Header';
 
