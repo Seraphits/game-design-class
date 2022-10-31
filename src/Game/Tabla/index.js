@@ -2,23 +2,38 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 // import TablaData from "./Data";
 import TablaData from "./questions";
-import { FinalResults } from './FinalResults';
+// import { FinalResults } from './FinalResults';ß
 import { Header } from './Header';
 
 export const Tabla = () => {
-  console.log("tabla" + TablaData);
+  console.log("tabla:");
   console.log(TablaData);
-  const sounds = TablaData;
-  console.log("sounds" + sounds);
-  console.log(sounds);
- const [showFinalResults, setFinalResults] = useState(false);
- const [score, setScore] = useState(34);
- const [currentSounds1, setCurrentSound1] = useState(0);
- const [currentSounds2, setCurrentSound2] = useState(1);
- const [currentSounds3, setCurrentSound3] = useState(2);
- const [currentSounds4, setCurrentSound4] = useState(3);
- const [currentSounds5, setCurrentSound5] = useState(4);
- const [currentSounds6, setCurrentSound6] = useState(5);
+  const questions = TablaData;
+  console.log("questions" );
+  console.log(questions);
+  const [showFinalResults, setFinalResults] = useState(false);
+  const [score, setScore] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(2);
+
+  // Helper Funtions
+  const optionClicked = (isCorrect) => {
+    console.log(isCorrect);
+    if(isCorrect) {
+      setScore(score +1)
+    }
+    if(currentQuestion +1 < questions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setFinalResults(true);
+    }
+  }
+
+  const restartGame = () => {
+    setScore(0);
+    setCurrentQuestion(0);
+    setFinalResults(false);
+  }
+
   return (
     <div>
       {/* Header */}
@@ -30,24 +45,32 @@ export const Tabla = () => {
         // {/* Final Results Card */}
         <FinalResultsCard>
           <h2>Final Results</h2>
-          <h3>1 out of 5 correct - (20%)</h3>
-          <button>play again</button>
+          <h3>{score} out of {questions.length} correct - ({Math.round((score/questions.length) *100)}%)</h3>
+          <button onClick={() => restartGame()} >play again</button>
         </FinalResultsCard>)
     :
         (
           // {/* Question card */}
           <QuestionCard>
-            <h2>Question 1</h2>
+            <h2>Question {currentQuestion + 1} of {questions.length}</h2>
             <Question>
-              {sounds[currentSounds1].hindi}
+              {questions[currentQuestion].question}
             </Question>
             <Opions>
-              <Opion ><div>{sounds[currentSounds1].hindi}</div></Opion >
+              {questions[currentQuestion].options.map((option) =>{
+                return (
+                  <Opion key={option.id}
+                  onClick={() => optionClicked(option.isCorrect)} >
+                    {option.option}
+                  </Opion>
+                )
+              })}
+              {/* <Opion ><div>{sounds[currentSounds1].hindi}</div></Opion >
               <Opion ><div>{sounds[currentSounds2].hindi}</div></Opion >
               <Opion ><div>{sounds[currentSounds3].hindi}</div></Opion >
               <Opion ><div>{sounds[currentSounds4].hindi}</div></Opion >
               <Opion ><div>{sounds[currentSounds5].hindi}</div></Opion >
-              <Opion ><div>{sounds[currentSounds6].hindi}</div></Opion >
+              <Opion ><div>{sounds[currentSounds6].hindi}</div></Opion > */}
             </Opions>
           </QuestionCard>
         )
