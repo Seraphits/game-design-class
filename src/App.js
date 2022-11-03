@@ -6,6 +6,7 @@ import FloppyBird from './Game/FloppyBird/001/FloppyBird'
 import MemoryGamePage from './Game/Memory/001/MemoryGamePage'
 import MemoryGamePage2 from './Game/Memory/002'
 import { Tabla } from './Game/Tabla'
+import { TablaRan } from './Game/Tabla/TablaRandom'
 // import MemoryGamePage3 from './Game/Memory/003/MemoryGamePage'
 import Header from './Layout/Header'
 import AddingData from './Pages/AddingData'
@@ -17,6 +18,7 @@ const App = () => {
     <div>
       <Header/>
       <Switch>
+        <Route path='/games/tablarandom'><TablaRan/></Route>
         <Route path='/games/tabla'><Tabla/></Route>
         <Route path='/games/floppybird'><FloppyBird/></Route>
         <Route path='/games/flashcards'><FlashCard/></Route>
