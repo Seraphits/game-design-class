@@ -6,7 +6,7 @@ import TablaData from "./Data";
 import { Header } from './Header';
 
 export const TablaRan = () => {
-  const questions = TablaData;
+  // const questions = TablaData;
   const [showFinalResults, setFinalResults] = useState(true);
   const [score, setScore] = useState(0);
   const [text, setText] = useState();
@@ -58,11 +58,17 @@ export const TablaRan = () => {
   // check answer
   const summit = () => {
     console.log("Click Submit");
-    console.log(selected);
     if(!selected) {
       console.log("Please make a choose");
     } else {
       console.log("chech answer");
+      console.log(selected.id);
+      console.log(text[0].id);
+      if (selected.id === text[0].id) {
+        console.log("Match");
+      } else {
+        console.log("Not a Match");
+      }
     }
 
   }
