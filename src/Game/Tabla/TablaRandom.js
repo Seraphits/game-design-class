@@ -38,8 +38,8 @@ export const TablaRan = () => {
   useEffect(() => {
     console.log("useEffect run");
     if (selected) {
-      console.log("Cards");
-      console.log(cards);
+      // console.log("Cards");
+      // console.log(cards);
       setCards(prevCards => {
         return prevCards.map(card => {
           if (card.id === selected.id) {
