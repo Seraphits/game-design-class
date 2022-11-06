@@ -7,6 +7,7 @@ import MemoryGamePage from './Game/Memory/001/MemoryGamePage'
 import MemoryGamePage2 from './Game/Memory/002'
 import { Tabla } from './Game/Tabla'
 import { TablaRan } from './Game/Tabla/TablaRandom'
+import { TablaRefactor } from './Game/Tabla/001/TablaRefactor'
 // import MemoryGamePage3 from './Game/Memory/003/MemoryGamePage'
 import Header from './Layout/Header'
 import AddingData from './Pages/AddingData'
@@ -18,6 +19,7 @@ const App = () => {
     <div>
       <Header/>
       <Switch>
+        <Route path='/games/tablarefactor'><TablaRefactor/></Route>
         <Route path='/games/tablarandom'><TablaRan/></Route>
         <Route path='/games/tabla'><Tabla/></Route>
         <Route path='/games/floppybird'><FloppyBird/></Route>
