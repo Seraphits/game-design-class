@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import TablaData from "./Data";
 // import TablaData from "./questions";
@@ -11,39 +11,60 @@ export const TablaRan = () => {
   const [score, setScore] = useState(0);
   const [text, setText] = useState();
   const [cards, setCards] = useState();
+  const [selected, setSelected] = useState();
 
-
+// console.log("selected");
+// console.log(selected);
 
   // Make QU
   const makeQu = () => {
     const pickCards = [...TablaData].sort(() => Math.random() - 0.5)
-      .map(card => ({ ...card, id: Math.random(), selected: "false" })).slice(0, 4)
+      .map(card => ({ ...card, id: Math.random(), picked: "false" })).slice(0, 4)
     const quText = [...pickCards].sort(() => Math.random() - 0.5)
-        .map(card => ({ ...card, id1: Math.random(), selected: "true" })).slice(3)
+        .map(card => ({ ...card, id1: Math.random(), picked: "true" })).slice(3)
     setCards(pickCards)
     // console.log("text");
     setText(quText)
   }
 
-  console.log("options");
-  console.log(cards);
-  console.log("text");
-  console.log(text);
-// Helper Funtions
-  const optionClicked = (hindi) => {
-    const selected = hindi;
-    console.log(selected);
+  // console.log("options");
+  // console.log(cards);
+  // console.log("text");
+  // console.log(text);
+// select card
+  const optionClicked = (card) => {
+    setSelected(card);
   }
-  const summit = (isCorrect) => {
-    console.log(isCorrect);
-    if(isCorrect) {
-      setScore(score +1)
+  useEffect(() => {
+    console.log("useEffect run");
+    if (selected) {
+      console.log("Cards");
+      console.log(cards);
+      setCards(prevCards => {
+        return prevCards.map(card => {
+          if (card.id === selected.id) {
+            return {...card, picked: "true"}
+          } else {
+            return {...card, picked: "false"}
+          }
+        })
+      })
+      // console.log("Cards all false1");
+      // console.log(cards);
     }
-    // if(currentQuestion +1 < questions.length) {
-    //   setCurrentQuestion(currentQuestion + 1);
-    // } else {
-    //   setFinalResults(true);
-    // }
+  }, [selected])
+
+
+  // check answer
+  const summit = () => {
+    console.log("Click Submit");
+    console.log(selected);
+    if(!selected) {
+      console.log("Please make a choose");
+    } else {
+      console.log("chech answer");
+    }
+
   }
 
   const restartGame = () => {
@@ -57,7 +78,8 @@ export const TablaRan = () => {
     // console.log(currentQuestion);
     // console.log(question);
   }
-
+  // console.log("Cards out");
+  // console.log(cards);
   return (
     <div>
       {/* Header */}
@@ -84,13 +106,15 @@ export const TablaRan = () => {
             {cards.map((option) =>{
                 return (
                   <Opion key={option.id}
-                  onClick={() => optionClicked(option.hindi)} >
+                  onClick={() => optionClicked(option)}
+                  variant={option.picked}
+                  >
                     {option.hindi}
                   </Opion>
                 )
               })}
             </Opions>
-            <button onClick={() => summit}>Submit</button>
+            <button onClick={() => summit()}>Submit</button>
           </QuestionCard>
         )
       }
@@ -116,6 +140,7 @@ const Opion = styled.li`
   padding: 1rem;
   margin: 1rem;
   border: 3px solid green;
+  color: ${(props) => props.variant === "true" ? "green" : "red"};
 `;
 
 const FinalResultsCard = styled.div`
