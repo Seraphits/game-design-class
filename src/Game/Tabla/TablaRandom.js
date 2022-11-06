@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import TablaData from "./Data";
-// import TablaData from "./questions";
-// import { FinalResults } from './FinalResults';ß
 import { Header } from './Header';
+import Right from './Right';
+import Wrong from './Wrong';
 
 export const TablaRan = () => {
   // const questions = TablaData;
+  // const [startScreen, setStartScreen] = useState(true);
   const [showFinalResults, setFinalResults] = useState(true);
   const [score, setScore] = useState(0);
   const [text, setText] = useState();
   const [cards, setCards] = useState();
   const [selected, setSelected] = useState();
+  const [correct, setCorrect] = useState();
 
 // console.log("selected");
 // console.log(selected);
@@ -66,8 +68,10 @@ export const TablaRan = () => {
       console.log(text[0].id);
       if (selected.id === text[0].id) {
         console.log("Match");
+        setCorrect("true")
       } else {
         console.log("Not a Match");
+        setCorrect("false")
       }
     }
 
@@ -96,7 +100,13 @@ export const TablaRan = () => {
       { showFinalResults ? (
         // {/* Final Results Card */}
         <FinalResultsCard>
-          <h2>New Game</h2>
+          {
+
+          }
+          <Right/>
+          <Wrong/>
+
+          {/* <h2>New Game</h2> */}
           {/* <h3>{score} out of {questions.length} correct - ({Math.round((score/questions.length) *100)}%)</h3> */}
           <button onClick={() => restartGame()} >play again</button>
         </FinalResultsCard>)
