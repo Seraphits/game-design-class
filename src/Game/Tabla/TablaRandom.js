@@ -74,9 +74,18 @@ export const TablaRan = () => {
           <QuestionCard>
             {/* <h2>Question {currentQuestion + 1} of {questions.length}</h2> */}
             <Question>
-              {/* {questions[currentQuestion].question} */}
+              {text[0].hindi}
+
             </Question>
             <Opions>
+            {cards.map((option) =>{
+                return (
+                  <Opion key={option.id}
+                  onClick={() => optionClicked(option.isCorrect)} >
+                    {option.hindi}
+                  </Opion>
+                )
+              })}
               {/* {questions[currentQuestion].options.map((option) =>{
                 return (
                   <Opion key={option.id}
