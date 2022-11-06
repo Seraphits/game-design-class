@@ -17,11 +17,11 @@ export const TablaRan = () => {
   // Make QU
   const makeQu = () => {
     const pickCards = [...TablaData].sort(() => Math.random() - 0.5)
-      .map(card => ({ ...card, id: Math.random() })).slice(0, 4)
+      .map(card => ({ ...card, id: Math.random(), selected: "false" })).slice(0, 4)
     const quText = [...pickCards].sort(() => Math.random() - 0.5)
-        .map(card => ({ ...card, id1: Math.random() })).slice(3)
+        .map(card => ({ ...card, id1: Math.random(), selected: "true" })).slice(3)
     setCards(pickCards)
-    console.log("text");
+    // console.log("text");
     setText(quText)
   }
 
@@ -30,7 +30,11 @@ export const TablaRan = () => {
   console.log("text");
   console.log(text);
 // Helper Funtions
-  const optionClicked = (isCorrect) => {
+  const optionClicked = (hindi) => {
+    const selected = hindi;
+    console.log(selected);
+  }
+  const summit = (isCorrect) => {
     console.log(isCorrect);
     if(isCorrect) {
       setScore(score +1)
@@ -75,26 +79,18 @@ export const TablaRan = () => {
             {/* <h2>Question {currentQuestion + 1} of {questions.length}</h2> */}
             <Question>
               {text[0].hindi}
-
             </Question>
             <Opions>
             {cards.map((option) =>{
                 return (
                   <Opion key={option.id}
-                  onClick={() => optionClicked(option.isCorrect)} >
+                  onClick={() => optionClicked(option.hindi)} >
                     {option.hindi}
                   </Opion>
                 )
               })}
-              {/* {questions[currentQuestion].options.map((option) =>{
-                return (
-                  <Opion key={option.id}
-                  onClick={() => optionClicked(option.isCorrect)} >
-                    {option.option}
-                  </Opion>
-                )
-              })} */}
             </Opions>
+            <button onClick={() => summit}>Submit</button>
           </QuestionCard>
         )
       }
