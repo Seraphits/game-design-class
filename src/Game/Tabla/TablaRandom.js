@@ -74,7 +74,6 @@ export const TablaRan = () => {
         setCorrect("false")
       }
     }
-
   }
 
   const restartGame = () => {
