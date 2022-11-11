@@ -93,7 +93,7 @@ export const TablaRan = () => {
   return (
     <div>
       {/* Header */}
-      <Header/>
+      {/* <Header/>ß */}
       {/* Current Score */}
       <h2>Current Score: {score}</h2>
 
