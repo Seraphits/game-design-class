@@ -38,7 +38,7 @@ export const TablaRan = () => {
     setSelected(card);
   }
   useEffect(() => {
-    console.log("useEffect run");
+    // console.log("useEffect run");
     if (selected) {
       // console.log("Cards");
       // console.log(cards);
@@ -74,8 +74,14 @@ export const TablaRan = () => {
         setCorrect("false")
       }
     }
-
   }
+  useEffect(() => {
+    console.log("useRffiect Correct");
+    if (correct) {
+      console.log("Correct");
+    }
+
+  },[correct])
 
   const restartGame = () => {
     setScore(0);
@@ -100,11 +106,17 @@ export const TablaRan = () => {
       { showFinalResults ? (
         // {/* Final Results Card */}
         <FinalResultsCard>
-          {
+          {correct ? (
+            <Right/>
+          )
+
+          :(
+            <Wrong/>
+          )
 
           }
-          <Right/>
-          <Wrong/>
+
+
 
           {/* <h2>New Game</h2> */}
           {/* <h3>{score} out of {questions.length} correct - ({Math.round((score/questions.length) *100)}%)</h3> */}
