@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const QuestionCard = styled.div`
+  display: ${(props) => props.variant === "true" ? "green" : "red"};
   background-color: lightgreen;
   padding: 1rem;
   margin: 2rem;

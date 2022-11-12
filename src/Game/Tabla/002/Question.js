@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {QuestionCard, Question, Opions, Opion} from './QuestionStyled';
 import TablaData from "../Data";
+import Right from '../001/Right';
+import Wrong from '../001/Wrong';
 
 export const QuestionComp= () => {
   const [showResults, setResults] = useState(false);
@@ -67,11 +69,14 @@ export const QuestionComp= () => {
       }
     }
   }
-
+  useEffect(() => {
+    console.log("correct");
+    console.log(correct);
+  },[correct])
 
   return (
     <>
-      {cards ? (
+      {(cards && !correct) ? (
         <QuestionCard>
           <Question>
             {text[0].hindi}
@@ -93,14 +98,17 @@ export const QuestionComp= () => {
         ) : (
           <p>Select The Letters that are the Same</p>
         )}
-
       </QuestionCard>
       ) : (
         <div> Loading</div>
       )}
-
-
-
+      {(correct && correct === "true") ? (
+            <Right/>
+          )
+          :(
+            <Wrong/>
+          )
+          }
     </>
   )
 }
