@@ -49,10 +49,7 @@ export const QuestionComp= () => {
     makeQu()
   },[])
 
-    console.log("options");
-  console.log(cards);
-  console.log("text");
-  console.log(text);
+ // check answer
   const summit = () => {
     console.log("Click Submit");
     if(!selected) {
@@ -91,13 +88,19 @@ export const QuestionComp= () => {
             )
           })}
         </Opions>
+        {selected ? (
+          <button onClick={() => summit()}>Submit</button>
+        ) : (
+          <p>Select The Letters that are the Same</p>
+        )}
+
       </QuestionCard>
       ) : (
-        <div> hi</div>
+        <div> Loading</div>
       )}
 
 
-      {/* <button onClick={() => summit()}>Submit</button> */}
+
     </>
   )
 }
