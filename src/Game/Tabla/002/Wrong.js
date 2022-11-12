@@ -1,29 +1,32 @@
 import React, { useState } from 'react'
 import { QuestionComp } from './Question';
-// import { makeQu } from './MakeQu';
-// import TablaData from "../Data";
 
-export const StartScreenTabla = () => {
+function Wrong() {
   const [showQuestion, setShowQuestion] = useState(false);
-  // const [text, setText] = useState();
-  // const [cards, setCards] = useState();
   const handleClick = () => {
     console.log("startScreen");
     // makeQu()
     setShowQuestion(true);
   }
-
   return (
-    <div>StartScreenTabla
+    <div>
+
       {showQuestion ? (
           <QuestionComp/>
         ) : (
-          <div onClick={ handleClick }>Start Game</div>
+          <>
+            Wrong
+            <button onClick={() => handleClick()}>New Question</button>
+          </>
         )
       }
+
+
+
 
 
     </div>
   )
 }
-// {setStartScreen(false)}
+
+export default Wrong

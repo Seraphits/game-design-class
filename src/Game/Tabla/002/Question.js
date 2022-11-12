@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {QuestionCard, Question, Opions, Opion} from './QuestionStyled';
 import TablaData from "../Data";
-import Right from '../001/Right';
-import Wrong from '../001/Wrong';
+import Right from '../002/Right';
+import Wrong from '../002/Wrong';
 
 export const QuestionComp= () => {
   const [showResults, setResults] = useState(false);
@@ -10,6 +10,8 @@ export const QuestionComp= () => {
   const [cards, setCards] = useState();
   const [selected, setSelected] = useState();
   const [correct, setCorrect] = useState();
+  const [score, setScore] = useState(0);
+  const [level, setLevel] = useState(0);
 
   // select card
   const optionClicked = (card) => {
@@ -63,9 +65,20 @@ export const QuestionComp= () => {
       if (selected.id === text[0].id) {
         console.log("Match");
         setCorrect("true")
+        if (score > 25) {
+          setScore(0)
+          setLevel(level + 1)
+        } else {
+          setScore(score +1)
+        }
       } else {
         console.log("Not a Match");
         setCorrect("false")
+        if (score < level) {
+          setScore(0)
+        } else {
+          setScore(score +level)
+        }
       }
     }
   }
@@ -86,7 +99,7 @@ export const QuestionComp= () => {
             <Wrong/>
           )
         }
-        <button onClick={() => makeQu()}>New Question</button>
+        {/* <button onClick={() => makeQu()}>New Question</button> */}
       </QuestionCard>
       </>
       ) : (
