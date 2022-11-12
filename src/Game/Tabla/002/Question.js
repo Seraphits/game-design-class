@@ -76,7 +76,22 @@ export const QuestionComp= () => {
 
   return (
     <>
-      {(cards && !correct) ? (
+      {correct ? (
+        <>
+        <QuestionCard>
+         {(correct === "true") ? (
+            <Right/>
+          )
+          :(
+            <Wrong/>
+          )
+        }
+        <button onClick={() => makeQu()}>New Question</button>
+      </QuestionCard>
+      </>
+      ) : (
+        <>
+          {cards  ? (
         <QuestionCard>
           <Question>
             {text[0].hindi}
@@ -102,13 +117,8 @@ export const QuestionComp= () => {
       ) : (
         <div> Loading</div>
       )}
-      {(correct && correct === "true") ? (
-            <Right/>
-          )
-          :(
-            <Wrong/>
-          )
-          }
+        </>
+      )}
     </>
   )
 }
