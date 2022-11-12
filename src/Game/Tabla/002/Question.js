@@ -9,9 +9,30 @@ export const QuestionComp= () => {
   const [selected, setSelected] = useState();
   const [correct, setCorrect] = useState();
 
+  // select card
   const optionClicked = (card) => {
     setSelected(card);
   }
+
+  useEffect(() => {
+    // console.log("useEffect run");
+    if (selected) {
+      // console.log("Cards");
+      // console.log(cards);
+      setCards(prevCards => {
+        return prevCards.map(card => {
+          if (card.id === selected.id) {
+            return {...card, picked: "true"}
+          } else {
+            return {...card, picked: "false"}
+          }
+        })
+      })
+      // console.log("Cards all false1");
+      // console.log(cards);
+    }
+  }, [selected])
+
   // Make QU
   const makeQu = () => {
     const pickCards = [...TablaData].sort(() => Math.random() - 0.5)
@@ -49,6 +70,8 @@ export const QuestionComp= () => {
       }
     }
   }
+
+
   return (
     <>
       {cards ? (
