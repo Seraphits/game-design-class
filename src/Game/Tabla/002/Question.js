@@ -68,16 +68,20 @@ export const QuestionComp= () => {
         if (score > 25) {
           setScore(0)
           setLevel(level + 1)
+          console.log("Level Up");
         } else {
-          setScore(score +1)
+          setScore(score +1);
+          console.log("score + 1");
         }
       } else {
         console.log("Not a Match");
         setCorrect("false")
         if (score < level) {
           setScore(0)
+          console.log("score to 0");
         } else {
-          setScore(score +level)
+          setScore(score - level)
+          console.log("score - level");
         }
       }
     }
@@ -86,12 +90,13 @@ export const QuestionComp= () => {
     console.log("correct");
     console.log(correct);
   },[correct])
-
+console.log(score);
   return (
     <>
       {correct ? (
         <>
         <QuestionCard>
+        {score} {level}
          {(correct === "true") ? (
             <Right/>
           )
@@ -106,6 +111,7 @@ export const QuestionComp= () => {
         <>
           {cards  ? (
         <QuestionCard>
+          {score} {level}
           <Question>
             {text[0].hindi}
           </Question>
