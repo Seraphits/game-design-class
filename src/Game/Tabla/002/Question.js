@@ -90,28 +90,28 @@ export const QuestionComp= () => {
     console.log("correct");
     console.log(correct);
   },[correct])
+console.log("score Qu component");
 console.log(score);
   return (
-    <>
+    <QuestionCard>
+      {score} {level}
       {correct ? (
         <>
-        <QuestionCard>
-        {score} {level}
+
          {(correct === "true") ? (
-            <Right/>
+            <Right score={score} level={level} />
           )
           :(
             <Wrong/>
           )
         }
         {/* <button onClick={() => makeQu()}>New Question</button> */}
-      </QuestionCard>
       </>
       ) : (
         <>
           {cards  ? (
-        <QuestionCard>
-          {score} {level}
+        <>
+          {/* {score} {level} */}
           <Question>
             {text[0].hindi}
           </Question>
@@ -132,12 +132,12 @@ console.log(score);
         ) : (
           <p>Select The Letters that are the Same</p>
         )}
-      </QuestionCard>
+      </>
       ) : (
         <div> Loading</div>
       )}
         </>
       )}
-    </>
+    </QuestionCard>
   )
 }
