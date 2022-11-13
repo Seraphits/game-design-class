@@ -5,9 +5,7 @@ import { StartScreenTabla } from './StartScreenTabla';
 export const TablaStyled = () => {
   return (
     <div>TablaStyled
-        <StartScreenTabla
-
-        />
+        <StartScreenTabla/>
     </div>
   )
 }
