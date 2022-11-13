@@ -68,5 +68,58 @@ export const Tabla2 = styled.div`
   }
 
 `;
+export const TablaWord = styled.div`
+  grid-row: 2 / 8;
+  grid-column: 1 / 2;
+  display: grid;
+  align-items: center;
+  justify-content: right;
+  @media  (min-aspect-ratio: 3/2) {
+      grid-row: 2 / 7;
+      grid-column: 4 / 5;
+  }
+  @media all and (orientation: portrait){
+      grid-row: 2 / 9;
+      grid-column: 4 / 5;
+      transform: rotate(-30deg);
+  }
+`;
+export const TablaH1 = styled.h1`
+  font-size: clamp(1.5rem, 11vh, 15rem ) ;
+  color: burlywood;
+  font-family: 'Hanalei', cursive;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  @media  screen and (orientation: portrait) {
+      font-size: clamp(1.5rem, 10vh, 11rem ) ;
+  }
+`;
+export const SoundWord = styled.div`
+  display: none ;
+  margin: auto;
+  @media  all and (orientation: portrait){
+      display: block ;
+      grid-row: -1 / -3;
+      grid-column: 2 / 6;
+  }
+  @media  screen and (max-width: 700px) {
+      display: none;
+  }
+`;
+export const SoundH1 = styled.h1`
+  font-size: clamp(1.5rem, 6vh, 15rem );
+  font-family: 'Henny Penny', cursive;
+  color: rgb(211, 179, 138);
+`;
+export const PlayButton = styled.div`
+  grid-row: -1 / -3;
+  grid-column: -1 / -3;
+  margin: auto;
+  @media  screen and (max-width: 700px) and (orientation: portrait) {
+      grid-row: -1 / -3;
+      grid-column: 1 / 9;
+  }
+`;
+// export const SoundH1 = styled.link`
 
-
+// `;

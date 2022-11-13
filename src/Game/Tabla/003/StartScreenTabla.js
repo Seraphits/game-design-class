@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { QuestionComp } from './Question';
-import { Logo, LogoH3, PicContainer, SplashScreen, Tabla1, Tabla2, TablaPair } from './StartScreenTabla.styled';
+import { Logo, LogoH3, PicContainer, PlayButton, SoundH1, SoundWord, SplashScreen, Tabla1, Tabla2, TablaH1, TablaPair, TablaWord } from './StartScreenTabla.styled';
 // import { makeQu } from './MakeQu';
 // import TablaData from "../Data";
+import TP from './img/tabla-pair.png';
+import { StartGameButton } from './Button.styled';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export const StartScreenTabla = () => {
   const [showQuestion, setShowQuestion] = useState(false);
@@ -20,12 +23,12 @@ export const StartScreenTabla = () => {
           <QuestionComp/>
         ) : (
           <SplashScreen>
-             <Logo>
+            <Logo>
                 <LogoH3>Scrambled Sounds</LogoH3>
             </Logo>
             <TablaPair>
               <PicContainer>
-                <img scr='../../../public/img/tabla-pair.png' alt='Tabla Set' />
+                <img scr={TP} alt='Tabla Set' />
               </PicContainer>
 
                  {/* <img src="./img/tabla-pair.png" alt="" class="img__tabla--1"> */}
@@ -40,15 +43,15 @@ export const StartScreenTabla = () => {
                 {/* <img src="/img/Tabla2.png" alt="" class="img__tabla--1"> */}
               </PicContainer>
             </Tabla2>
-              {/*  <div class="tabla__item--tabla tabla__item">
-                  <h1 class="text__vertical h1__tabla">TABLA</h1>
-              </div>
-              <div class="tabla__item--sounds tabla__item">
-                  <h1 class=" h1__sounds">Sounds</h1>
-              </div>
-              <div class="tabla__item--play tabla__item">
-                  <a href="#" class="btn__color__scrambled--1 btn__hero1">PLAY</a>
-              </div> */}
+              <TablaWord>
+                  <TablaH1>TABLA</TablaH1>
+              </TablaWord>
+              <SoundWord>
+                  <SoundH1>Sounds</SoundH1>
+              </SoundWord>
+              <PlayButton>
+                  <StartGameButton href="#" >PLAY</StartGameButton>
+              </PlayButton>
           </SplashScreen>
         )
       }
