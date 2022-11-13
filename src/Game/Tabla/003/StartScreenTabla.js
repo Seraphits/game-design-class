@@ -3,9 +3,9 @@ import { QuestionComp } from './Question';
 import { Logo, LogoH3, PicContainer, PlayButton, SoundH1, SoundWord, SplashScreen, Tabla1, Tabla2, TablaH1, TablaPair, TablaWord } from './StartScreenTabla.styled';
 // import { makeQu } from './MakeQu';
 // import TablaData from "../Data";
-import TP from './img/tabla-pair.png';
+// import TP from './img/tabla-pair.png';
 import { StartGameButton } from './Button.styled';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+// import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export const StartScreenTabla = () => {
   const [showQuestion, setShowQuestion] = useState(false);
@@ -28,7 +28,7 @@ export const StartScreenTabla = () => {
             </Logo>
             <TablaPair>
               <PicContainer>
-                <img scr={TP} alt='Tabla Set' />
+                {/* <img scr={TP} alt='Tabla Set' /> */}
               </PicContainer>
 
                  {/* <img src="./img/tabla-pair.png" alt="" class="img__tabla--1"> */}
