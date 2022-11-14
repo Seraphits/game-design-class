@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import {QuestionCard, Question, Opions, Opion} from './QuestionStyled';
+import {QuestionCard, Question, Opions, Opion, Submittext, Submit} from './QuestionStyled';
 import TablaData from "../Data";
-import Right from '../002/Right';
-import Wrong from '../002/Wrong';
+import Right from '../003/Right';
+import Wrong from '../003/Wrong';
+import { SubmitButton } from './Button.styled';
 
 export const QuestionComp= () => {
   const [showResults, setResults] = useState(false);
@@ -94,7 +95,6 @@ console.log("score Qu component");
 console.log(score);
   return (
     <QuestionCard>
-      {score} {level}
       {correct ? (
         <>
 
@@ -127,11 +127,13 @@ console.log(score);
             )
           })}
         </Opions>
+        <Submit>
         {selected ? (
-          <button onClick={() => summit()}>Submit</button>
-        ) : (
-          <p>Select The Letters that are the Same</p>
-        )}
+            <SubmitButton onClick={() => summit()}>Submit</SubmitButton>
+          ) : (
+            <Submittext>Select The Letters that are the Same</Submittext>
+          )}
+        </Submit>
       </>
       ) : (
         <div> Loading</div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styled, { css } from "styled-components";
 
 export const SplashButton = css`
-  &,
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -18,10 +18,10 @@ export const SplashButton = css`
         // change for the <botton> element
         border:none;
         cursor: pointer;
-        &__splash {
+        /* &__splash {
             padding: clamp(1rem, 3vh, 4rem) clamp(4rem, 5vh, 6rem);
             font-size: clamp(2rem, 4vh, 4rem);
-        }
+        } */
     }
     &:hover {
         transform:  translateY(-3px);
@@ -63,7 +63,24 @@ export const GreenButton = css`
       background-color: green;
   }
 `;
-export const StartGameButton = styled(Link)`
+export const StartGameButton = styled.button`
   ${SplashButton}
   ${GreenButton}
+`;
+
+export const SubmitButton = styled.button`
+  ${SplashButton}
+  ${GreenButton}
+  &,
+    &:link,
+    &:visited {
+        border-radius: 10rem;
+        transition: all .2s;
+        padding: .5rem 2rem;
+        font-size: 1rem;
+    }
+
+
+
+
 `;

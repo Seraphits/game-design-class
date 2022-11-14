@@ -66,7 +66,6 @@ export const Tabla2 = styled.div`
       grid-row: 3 / 7;
       grid-column: 5 / 7;
   }
-
 `;
 export const TablaWord = styled.div`
   grid-row: 2 / 8;

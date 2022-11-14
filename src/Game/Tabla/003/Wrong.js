@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import { SubmitButton } from './Button.styled';
 import { QuestionComp } from './Question';
+import { ResultsText, Results } from './QuestionStyled';
 
 function Wrong(score, level) {
   const [showQuestion, setShowQuestion] = useState(false);
@@ -20,10 +22,10 @@ function Wrong(score, level) {
       {showQuestion ? (
           <QuestionComp/>
         ) : (
-          <>
-            Wrong
-            <button onClick={() => handleClick()}>New Question</button>
-          </>
+          <Results>
+            <ResultsText>Wrong</ResultsText>
+              <SubmitButton onClick={() => handleClick()}>New Question</SubmitButton>
+          </Results>
         )
       }
 

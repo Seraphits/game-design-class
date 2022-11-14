@@ -18,7 +18,7 @@ export const StartScreenTabla = () => {
   }
 
   return (
-    <div>StartScreenTabla
+    <div>
       {showQuestion ? (
           <QuestionComp/>
         ) : (
@@ -50,7 +50,7 @@ export const StartScreenTabla = () => {
                   <SoundH1>Sounds</SoundH1>
               </SoundWord>
               <PlayButton>
-                  <StartGameButton href="#" >PLAY</StartGameButton>
+                  <StartGameButton onClick={ handleClick } >PLAY</StartGameButton>
               </PlayButton>
           </SplashScreen>
         )
