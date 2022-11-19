@@ -1,6 +1,9 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import GraphQL001 from './AddingData/GraphQL/001'
+import { ObjectDagga } from './Animations/Objects/Dagga'
+import { ObjectHand } from './Animations/Objects/Hand'
+import { ObjectTabla } from './Animations/Objects/Tabla'
 import FlashCard from './Game/FlashCards/001/FlashCardsPage'
 import FloppyBird from './Game/FloppyBird/001/FloppyBird'
 import MemoryGamePage from './Game/Memory/001/MemoryGamePage'
@@ -22,6 +25,9 @@ const App = () => {
     <div>
       <Header/>
       <Switch>
+        <Route path='/animations/hand'><ObjectHand/></Route>
+        <Route path='/animations/dagga'><ObjectDagga/></Route>
+        <Route path='/animations/tabla'><ObjectTabla/></Route>
         <Route path='/animations'><Animations/></Route>
         <Route path='/games/tablaanimated'><TablaAnimated/></Route>
         <Route path='/games/tablastyled'><TablaStyled/></Route>
