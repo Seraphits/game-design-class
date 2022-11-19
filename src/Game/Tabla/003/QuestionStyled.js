@@ -11,7 +11,6 @@ export const QuestionCard = styled.div`
     grid-template-rows: repeat(10, 1fr);
     } */
 `;
-
 export const Question = styled.div`
   /* list-style: none; */
   text-align: center;
