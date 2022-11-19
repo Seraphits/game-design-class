@@ -113,7 +113,7 @@ console.log(score);
         <>
           {/* {score} {level} */}
           <Question>
-            {text[0].hindi}
+            {text[0].english}
           </Question>
           <Opions>
           {cards.map((option) =>{
