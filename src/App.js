@@ -9,6 +9,7 @@ import { Tabla } from './Game/Tabla/001'
 import { TablaRan } from './Game/Tabla/001/TablaRandom'
 import { TablaRefactor } from './Game/Tabla/002/TablaRefactor'
 import {TablaStyled} from './Game/Tabla/003'
+import {TablaAnimated} from './Game/Tabla/004'
 // import MemoryGamePage3 from './Game/Memory/003/MemoryGamePage'
 import Header from './Layout/Header'
 import AddingData from './Pages/AddingData'
@@ -20,6 +21,7 @@ const App = () => {
     <div>
       <Header/>
       <Switch>
+        <Route path='/games/tablaanimated'><TablaAnimated/></Route>
         <Route path='/games/tablastyled'><TablaStyled/></Route>
         <Route path='/games/tablarefactor'><TablaRefactor/></Route>
         <Route path='/games/tablarandom'><TablaRan/></Route>
