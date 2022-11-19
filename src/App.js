@@ -13,6 +13,7 @@ import {TablaAnimated} from './Game/Tabla/004'
 // import MemoryGamePage3 from './Game/Memory/003/MemoryGamePage'
 import Header from './Layout/Header'
 import AddingData from './Pages/AddingData'
+import { Animations } from './Pages/Animations'
 import GamesList from './Pages/GamesList'
 import Home from './Pages/Home'
 
@@ -21,6 +22,7 @@ const App = () => {
     <div>
       <Header/>
       <Switch>
+        <Route path='/animations'><Animations/></Route>
         <Route path='/games/tablaanimated'><TablaAnimated/></Route>
         <Route path='/games/tablastyled'><TablaStyled/></Route>
         <Route path='/games/tablarefactor'><TablaRefactor/></Route>
