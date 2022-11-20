@@ -38,6 +38,7 @@ const Frame = styled.div`
   width: 200px;
   height: 200px;
   background-color:  transparent;
+  /* background-color:  pink; */
   /* border: 2px solid orange; */
   border-radius: 1.5rem;
   /* margin: 2rem;÷ */
@@ -50,7 +51,7 @@ const Frame1 = styled.div`
   width: 200px;
   height: 200px;
   background-color:  transparent;
-  background-color:  blue;
+  /* background-color:  blue; */
   /* border: 2px solid orange; */
   border-radius: 1.5rem;
   /* margin: 2rem;÷ */
