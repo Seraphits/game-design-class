@@ -6,6 +6,7 @@ import { ObjectDagga } from '../Animations/Objects/Dagga';
 import { ObjectHand } from '../Animations/Objects/Hand';
 import { ObjectTabla } from '../Animations/Objects/Tabla';
 import { HandwithDrums } from '../Animations/Scenes/HandwithDrums';
+import { PlayTablaKeyFrame } from '../Animations/Scenes/PlayTablaKeyFrame';
 import { TablaSet } from '../Animations/Scenes/TablaSet';
 import { Wrapper, Grid } from '../UI/Utility';
 
@@ -28,6 +29,7 @@ export const Animations = () => {
         <Frame><Hand><ObjectHand/></Hand></Frame>
         <Frame1><TablaSet/></Frame1>
         <Frame1><HandwithDrums/></Frame1>
+        <Frame1><PlayTablaKeyFrame/></Frame1>
         </Grid>
         <Beaver/>
 
