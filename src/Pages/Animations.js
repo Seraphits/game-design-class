@@ -27,7 +27,7 @@ export const Animations = () => {
         <Frame><ObjectTabla/></Frame>
         <Frame><Hand><ObjectHand/></Hand></Frame>
         <Frame1><TablaSet/></Frame1>
-        <Frame><HandwithDrums/></Frame>
+        <Frame1><HandwithDrums/></Frame1>
         </Grid>
         <Beaver/>
 
@@ -50,7 +50,7 @@ const Frame = styled.div`
   height: 200px;
   background-color:  transparent;
   /* background-color:  pink; */
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   /* border-radius: 1.5rem; */
   /* margin: 2rem;÷ */
   display: grid;
@@ -63,7 +63,7 @@ const Frame1 = styled.div`
   height: 200px;
   background-color:  transparent;
   /* background-color:  blue; */
-  /* border: 2px solid orange; */
+  border: 2px solid orange;
   border-radius: 1.5rem;
   /* margin: 2rem;÷ */
   /* display: grid; */

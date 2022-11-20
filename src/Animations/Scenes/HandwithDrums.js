@@ -20,10 +20,10 @@ const Hand1 = styled.div`
   height: 30%;
   top: 0;
   right: -35%;
-  transform: translateY(-50%) rotate(10deg) translateX(5%);
+  transform: translateY(-30%) rotate(10deg) translateX(5%);
   transition: all .5s;
   &:hover {
-    transform:  rotate(-35deg) translateY(0);
+    transform:  rotate(-35deg) translateY(20%) translateX(-10%);
 
   }
 `;
