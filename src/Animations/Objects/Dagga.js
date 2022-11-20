@@ -16,18 +16,7 @@ export const ObjectDagga = () => {
 
   )
 }
-const Frame = styled.div`
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background-color: transparent;
-  /* border: 2px solid orange; */
-  border-radius: 1.5rem;
-  margin: 2rem;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-`;
+
 const Dagga = styled.div`
   position: absolute;
   background-color: #ba986c;

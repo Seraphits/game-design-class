@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { QuestionComp } from './Question';
-import { Logo, LogoH3, PicContainer, PlayButton, SoundH1, SoundWord, SplashScreen, Tabla1, Tabla2, TablaH1, TablaPair, TablaWord } from './StartScreenTabla.styled';
+import { Logo, LogoH3, PlayButton, SoundH1, SoundWord, SplashScreen, Tabla1, Tabla2, TablaH1, TablaPair, TablaWord } from './StartScreenTabla.styled';
 // import { makeQu } from './MakeQu';
 // import TablaData from "../Data";
 // import TP from './img/tabla-pair.png';

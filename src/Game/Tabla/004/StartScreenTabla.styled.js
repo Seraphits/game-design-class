@@ -22,13 +22,6 @@ export const LogoH3 = styled.h3`
   padding-top : 2vh ;
   padding-left: 3vw;
 `;
-export const PicContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  background: green;
-`;
 
 export const TablaPair = styled.div`
   grid-row: 2 / 8;

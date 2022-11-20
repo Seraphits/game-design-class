@@ -14,18 +14,6 @@ export const ObjectTabla = () => {
   )
 }
 
-const Frame = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color:  transparent;
-  /* border: 2px solid orange; */
-  border-radius: 1.5rem;
-  margin: 2rem;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-`;
 const Tabla = styled.div`
   position: absolute;
   background-color: #c4a378;
