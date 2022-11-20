@@ -23,7 +23,7 @@ const Hand1 = styled.div`
   transform: translateY(-30%) rotate(10deg) translateX(5%);
   transition: all .5s;
   &:hover {
-    transform:  rotate(-35deg) translateY(20%) translateX(-10%);
+    transform:  rotate(-35deg)  translateY(20%) translateX(-10%);
 
   }
 `;
@@ -35,8 +35,8 @@ const Hand2 = styled.div`
   top: -5%;
   right: 15%;
   transform: translateY(-60%) rotate(15deg) ;
-  &:hover {
   transition: all .5s;
+  &:hover {
     transform:  rotate(-45deg) translateY(-5%) translateX(-5%);
 
   }
