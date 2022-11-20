@@ -12,10 +12,8 @@ export const ObjectHand = () => {
 }
 const Frame = styled.div`
   position: absolute;
-  width: 80%;
-  height: 30%;
-  top: 10%;
-  right: 0;
+  width: 100%;
+  height: 100%;
   background-color:  transparent;
 `;
 const Hand = styled.div`
