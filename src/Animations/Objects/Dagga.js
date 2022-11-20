@@ -3,16 +3,16 @@ import styled from 'styled-components';
 
 export const ObjectDagga = () => {
   return (
-    <div>
-      <h3>ObjectDagga</h3>
+    <>
+      {/* <h3>ObjectDagga</h3>
       <p>larger drum</p>
-      <Frame>
+      <Frame> */}
         <Dagga/>
           <DrumTopWhite>
             <DrumTopBlack />
           </DrumTopWhite>
-      </Frame>
-    </div>
+      {/* </Frame> */}
+    </>
 
   )
 }

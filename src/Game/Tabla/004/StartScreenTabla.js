@@ -5,6 +5,10 @@ import { Logo, LogoH3, PicContainer, PlayButton, SoundH1, SoundWord, SplashScree
 // import TablaData from "../Data";
 // import TP from './img/tabla-pair.png';
 import { StartGameButton } from './Button.styled';
+import { ObjectTabla } from '../../../Animations/Objects/Tabla';
+import styled from 'styled-components';
+import { ObjectDagga } from '../../../Animations/Objects/Dagga';
+import { TablaSet } from '../../../Animations/Scenes/TablaSet';
 // import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export const StartScreenTabla = () => {
@@ -27,21 +31,13 @@ export const StartScreenTabla = () => {
                 <LogoH3>Scrambled Sounds</LogoH3>
             </Logo>
             <TablaPair>
-              <PicContainer>
-                {/* <img scr={TP} alt='Tabla Set' /> */}
-              </PicContainer>
-
-                 {/* <img src="./img/tabla-pair.png" alt="" class="img__tabla--1"> */}
+              <Frame><TablaSet/></Frame>
             </TablaPair>
             <Tabla1>
-              <PicContainer>
-                {/* <img src="/img/Tabla1.png" alt="" class="img__tabla--1"></img> */}
-              </PicContainer>
+              <Frame><ObjectDagga/></Frame>
             </Tabla1>
             <Tabla2>
-              <PicContainer>
-                {/* <img src="/img/Tabla2.png" alt="" class="img__tabla--1"> */}
-              </PicContainer>
+              <Frame><ObjectTabla/></Frame>
             </Tabla2>
               <TablaWord>
                   <TablaH1>TABLA</TablaH1>
@@ -61,3 +57,13 @@ export const StartScreenTabla = () => {
   )
 }
 // {setStartScreen(false)} .  <div onClick={ handleClick }>Start Game</div>
+const Frame = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color:  transparent;
+  margin: 2rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+`;

@@ -3,16 +3,14 @@ import styled from 'styled-components';
 
 export const ObjectTabla = () => {
   return (
-    <div>
-      <h3>ObjectTabla</h3>
-      <p>smaller drum </p>
-      <Frame>
+    <>
+      {/* <Frame> */}
         <Tabla/>
         <DrumTopWhite>
           <DrumTopBlack />
         </DrumTopWhite>
-      </Frame>
-    </div>
+      {/* </Frame> */}
+    </>
   )
 }
 

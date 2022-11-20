@@ -38,7 +38,7 @@ export const TablaPair = styled.div`
       grid-column: 2 / 4;
   }
   @media all and (orientation: portrait){
-      /* display: none; */
+      display: none;
   }
 `;
 export const Tabla1 = styled.div`
