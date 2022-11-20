@@ -6,7 +6,7 @@ import Wrong from '../003/Wrong';
 import { SubmitButton } from './Button.styled';
 
 export const QuestionComp= () => {
-  const [showResults, setResults] = useState(false);
+  // const [showResults, setResults] = useState(false);
   const [text, setText] = useState();
   const [cards, setCards] = useState();
   const [selected, setSelected] = useState();

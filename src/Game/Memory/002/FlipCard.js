@@ -47,7 +47,7 @@ const Back = styled(Card)`
  display: ${(props) => props.variant === "true" ? "none" : "grid"};
 `;
 const Tabla = styled.div`
-position: relative;
+  position: relative;
   width: 25px;
   height: 25px;
   background-color: black;
