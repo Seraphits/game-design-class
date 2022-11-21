@@ -54,14 +54,39 @@ export const Submittext = styled.div`
   color: white;
 `;
 
-export const ResultsText = styled.h1`
+export const ResultsText = styled.p`
   font-size: clamp(1.5rem, 20vh, 20rem ) ;
   color: burlywood;
   font-family:  cursive;
   padding: 0;
   margin: 0;
+  /* background:pink; */
 `;
-export const Results = styled.h1`
+export const Results = styled.div`
+  position: relative;
   text-align: center;
   padding: 15vh;
+  margin: auto;
+  /* display: grid;
+  justify-content: center;
+  align-items: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: red; */
+`;
+export const AminationsFrame = styled.div`
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color:  transparent;
+  /* background-color:  blue; */
+  /* border: 2px solid orange; */
+  /* border-radius: 1.5rem; */
+  /* margin: 0; */
+  /* display: grid; */
+
+  /* justify-content: center;
+  align-items: center;*/
 `;

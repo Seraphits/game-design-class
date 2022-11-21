@@ -37,6 +37,6 @@ const Hand2 = styled.div`
   height: 29.5%;
   top: -5%;
   right: 15%;
-  animation: ${MoveHand1} .4s both infinite alternate .2s;
+  animation: ${MoveHand2} .4s both infinite alternate .2s;
 `;
 

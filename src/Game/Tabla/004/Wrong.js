@@ -24,17 +24,12 @@ function Wrong(score, level) {
         ) : (
           <Results>
             <ResultsText>Wrong</ResultsText>
-              <SubmitButton onClick={() => handleClick()}>New Question</SubmitButton>
+            <SubmitButton onClick={() => handleClick()}>New Question</SubmitButton>
           </Results>
         )
       }
-
-
-
-
-
     </div>
   )
 }
 
-export default Wrong
+export default Wrong;

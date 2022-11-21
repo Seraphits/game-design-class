@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {QuestionCard, Question, Opions, Opion, Submittext, Submit} from './QuestionStyled';
 import TablaData from "../Data";
-import Right from '../003/Right';
-import Wrong from '../003/Wrong';
+import Right from './Right';
+import Wrong from './Wrong';
 import { SubmitButton } from './Button.styled';
 
 export const QuestionComp= () => {

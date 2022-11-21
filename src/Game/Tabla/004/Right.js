@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import styled from 'styled-components';
+import { PlayTablaKeyFrame } from '../../../Animations/Scenes/PlayTablaKeyFrame';
 import { SubmitButton } from './Button.styled';
 import { QuestionComp } from './Question';
-import { Results, ResultsText } from './QuestionStyled';
+import { Results, ResultsText, AminationsFrame } from './QuestionStyled';
 
 function Right() {
   const [showQuestion, setShowQuestion] = useState(false);
@@ -16,14 +18,16 @@ function Right() {
           <QuestionComp/>
         ) : (
           <Results>
+            <AminationsFrame><PlayTablaKeyFrame/></AminationsFrame>
             <ResultsText>Right</ResultsText>
-              <SubmitButton onClick={() => handleClick()}>New Question</SubmitButton>
+            <SubmitButton onClick={() => handleClick()}>New Question</SubmitButton>
           </Results>
         )
       }
     </div>
-
   )
 }
 
-export default Right
+export default Right;
+
+
