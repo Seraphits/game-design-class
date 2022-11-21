@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { PlayTablaKeyFrame } from '../../../Animations/Scenes/PlayTablaKeyFrame';
 import { SubmitButton } from './Button.styled';
 import { QuestionComp } from './Question';

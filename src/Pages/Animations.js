@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 import { Beaver } from '../Animations/Objects/Beaver';
 import { ObjectDagga } from '../Animations/Objects/Dagga';
 import { ObjectHand } from '../Animations/Objects/Hand';
 import { ObjectTabla } from '../Animations/Objects/Tabla';
+import { DeflatTablaKeyFrame } from '../Animations/Scenes/DeflatTablaKeyFrame';
 import { HandwithDrums } from '../Animations/Scenes/HandwithDrums';
 import { PlayTablaKeyFrame } from '../Animations/Scenes/PlayTablaKeyFrame';
 import { TablaSet } from '../Animations/Scenes/TablaSet';
@@ -30,6 +31,7 @@ export const Animations = () => {
         <Frame1><TablaSet/></Frame1>
         <Frame1><HandwithDrums/></Frame1>
         <Frame1><PlayTablaKeyFrame/></Frame1>
+        <Frame1><DeflatTablaKeyFrame/></Frame1>
         </Grid>
         <Beaver/>
 

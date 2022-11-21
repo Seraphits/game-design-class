@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { DeflatTablaKeyFrame } from '../../../Animations/Scenes/DeflatTablaKeyFrame';
 import { SubmitButton } from './Button.styled';
 import { QuestionComp } from './Question';
-import { ResultsText, Results } from './QuestionStyled';
+import { ResultsText, Results, AminationsFrame } from './QuestionStyled';
 
 function Wrong(score, level) {
   const [showQuestion, setShowQuestion] = useState(false);
@@ -23,6 +24,7 @@ function Wrong(score, level) {
           <QuestionComp/>
         ) : (
           <Results>
+            <AminationsFrame><DeflatTablaKeyFrame/></AminationsFrame>
             <ResultsText>Wrong</ResultsText>
             <SubmitButton onClick={() => handleClick()}>New Question</SubmitButton>
           </Results>
