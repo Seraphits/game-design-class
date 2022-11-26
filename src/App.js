@@ -13,22 +13,26 @@ import { TablaRan } from './Game/Tabla/001/TablaRandom'
 import { TablaRefactor } from './Game/Tabla/002/TablaRefactor'
 import {TablaStyled} from './Game/Tabla/003'
 import {TablaAnimated} from './Game/Tabla/004'
+import {TablaSound} from './Game/Tabla/005'
 // import MemoryGamePage3 from './Game/Memory/003/MemoryGamePage'
 import Header from './Layout/Header'
 import AddingData from './Pages/AddingData'
 import { Animations } from './Pages/Animations'
 import GamesList from './Pages/GamesList'
 import Home from './Pages/Home'
+import { Sounds } from './Pages/Sounds'
 
 const App = () => {
   return (
     <div>
       <Header/>
       <Switch>
+        <Route path='/sounds'><Sounds/></Route>
         <Route path='/animations/hand'><ObjectHand/></Route>
         <Route path='/animations/dagga'><ObjectDagga/></Route>
         <Route path='/animations/tabla'><ObjectTabla/></Route>
         <Route path='/animations'><Animations/></Route>
+        <Route path='/games/tablasound'><TablaSound/></Route>
         <Route path='/games/tablaanimated'><TablaAnimated/></Route>
         <Route path='/games/tablastyled'><TablaStyled/></Route>
         <Route path='/games/tablarefactor'><TablaRefactor/></Route>

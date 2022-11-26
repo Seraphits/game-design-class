@@ -15,7 +15,6 @@ export const Animations = () => {
   return (
     <Wrapper>
       <h1>Animations List</h1>
-
       {/* <h2>Animations for Games</h2>
       <Grid>
         <Link to='/animations/tabla'>Tabla</Link>
@@ -34,7 +33,6 @@ export const Animations = () => {
         <Frame1><DeflatTablaKeyFrame/></Frame1>
         </Grid>
         <Beaver/>
-
       </div>
     </Wrapper>
   )
