@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 // import { QuToResult } from './Question';
 import { StartScreenTabla } from './StartScreenTabla';
 

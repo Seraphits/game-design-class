@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import TablaData from "../Data";
-import { Header } from './Header';
 import Right from './Right';
 import Wrong from './Wrong';
 

@@ -5,7 +5,7 @@ import Right from '../002/Right';
 import Wrong from '../002/Wrong';
 
 export const QuestionComp= () => {
-  const [showResults, setResults] = useState(false);
+  // const [showResults, setResults] = useState(false);
   const [text, setText] = useState();
   const [cards, setCards] = useState();
   const [selected, setSelected] = useState();
