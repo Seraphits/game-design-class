@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {QuestionCard, Question, Opions, Opion, Submittext, Submit} from './QuestionStyled';
-import TablaData from "../Data";
+import TablaData from "../TablaData";
+// import TablaData from "../Data";
 import Right from './Right';
 import Wrong from './Wrong';
 import { SubmitButton } from './Button.styled';
@@ -13,6 +14,7 @@ export const QuestionComp= () => {
   const [correct, setCorrect] = useState();
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(0);
+  const [quSound, setQuSound] = useState();
 
   // select card
   const optionClicked = (card) => {
@@ -93,7 +95,26 @@ export const QuestionComp= () => {
   },[correct])
 console.log("score Qu component");
 console.log(score);
-  return (
+console.log(text);
+
+useEffect(() => {
+  if (text) {
+    let quSound = new Audio(`/Sounds/Tabla/${text[0].spoken}`)
+
+
+  }
+},[text])
+
+const PlayQuSound = ()=>  {
+    let quSound = new Audio(`/Sounds/Tabla/${text[0].spoken}`)
+      console.log("text");
+      console.log(text[0].spoken);
+      console.log("quSound");
+      console.log(quSound);
+      quSound.play();
+    }
+
+return (
     <QuestionCard>
       {correct ? (
         <>
@@ -114,6 +135,12 @@ console.log(score);
           {/* {score} {level} */}
           <Question>
             {text[0].english}
+            <br/>
+            <div  >
+              {text[0].spoken}
+            </div>
+            {quSound ? (<p>Loading</p>) : (<button onClick={PlayQuSound}>Play</button>)}
+{/* <p>Play</p> */}
           </Question>
           <Opions>
           {cards.map((option) =>{
@@ -122,7 +149,8 @@ console.log(score);
               onClick={() => optionClicked(option)}
               variant={option.picked}
               >
-                {option.hindi}
+                {option.english}
+
               </Opion>
             )
           })}

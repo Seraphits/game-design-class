@@ -1,4 +1,4 @@
-const TablaSounds = [
+const Tabla_Sounds = [
   {
     "english": "GHE",
     "hindi": "",
@@ -12,13 +12,15 @@ const TablaSounds = [
     "spoken": "Spoken_GHI.mp3",
     "played": "Dagga_GHI.mp3",
     "drum": "Dagga"
-  },{
+  },
+  {
     "english": "KA",
     "hindi": "",
     "spoken": "Spoken_KA.mp3",
     "played": "Dagga_KA.mp3",
     "drum": "Dagga"
-  },{
+  },
+  {
     "english": "KATH",
     "hindi": "",
     "spoken": "Spoken_KATH.mp3",
@@ -26,3 +28,5 @@ const TablaSounds = [
     "drum": "Dagga"
   }
 ]
+
+export default Tabla_Sounds;
