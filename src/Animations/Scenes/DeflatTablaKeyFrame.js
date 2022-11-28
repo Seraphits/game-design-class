@@ -29,7 +29,7 @@ const Hand1 = styled.div`
   height: 30%;
   top: 0;
   right: -35%;
-  animation: ${MoveHand1} .8s both .2s ;
+  animation: ${MoveHand1} .8s both .5s ;
   transform-origin: right;
 
 `;
@@ -40,6 +40,6 @@ const Hand2 = styled.div`
   height: 29.5%;
   top: -5%;
   right: 15%;
-  animation: ${MoveHand2} .8s both .2s;
+  animation: ${MoveHand2} .8s both .5s;
 `;
 
