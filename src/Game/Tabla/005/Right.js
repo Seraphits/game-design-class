@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // import styled from 'styled-components';
 import { PlayTablaKeyFrame } from '../../../Animations/Scenes/PlayTablaKeyFrame';
 import { SubmitButton } from './Button.styled';
@@ -12,6 +12,12 @@ function Right() {
     // makeQu()
     setShowQuestion(true);
   }
+
+  useEffect(() => {
+    let SoundRight = new Audio("/Sounds/Results/Rignt_Tabla.mp3");
+    SoundRight.play();
+  },[])
+
   return (
     <div>
         {showQuestion ? (

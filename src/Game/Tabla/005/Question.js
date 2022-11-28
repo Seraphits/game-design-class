@@ -132,7 +132,7 @@ return (
         <>
           {/* {score} {level} */}
           <Question>
-            {/* {text[0].english} */}
+            {text[0].english}
             <br/>
             <div  >
               {/* {text[0].spoken} */}
