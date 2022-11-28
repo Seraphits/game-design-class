@@ -6,13 +6,13 @@ const Tabla_Sounds = [
     "played": "Dagga_GHE.mp3",
     "drum": "Dagga"
   },
-  {
-    "english": "GHI",
-    "hindi": "",
-    "spoken": "Spoken_GHI.mp3",
-    "played": "Dagga_GHI.mp3",
-    "drum": "Dagga"
-  },
+  // {
+  //   "english": "GHI",
+  //   "hindi": "",
+  //   "spoken": "Spoken_GHI.mp3",
+  //   "played": "Dagga_GHI.mp3",
+  //   "drum": "Dagga"
+  // },
   {
     "english": "KA",
     "hindi": "",
@@ -20,13 +20,13 @@ const Tabla_Sounds = [
     "played": "Dagga_KA.mp3",
     "drum": "Dagga"
   },
-  {
-    "english": "KATH",
-    "hindi": "",
-    "spoken": "Spoken_KATH.mp3",
-    "played": "Dagga_KATH.mp3",
-    "drum": "Dagga"
-  },
+  // {
+  //   "english": "KATH",
+  //   "hindi": "",
+  //   "spoken": "Spoken_KATH.mp3",
+  //   "played": "Dagga_KATH.mp3",
+  //   "drum": "Dagga"
+  // },
   {
     "english": "CHAK",
     "hindi": "",
@@ -55,14 +55,13 @@ const Tabla_Sounds = [
     "played": "Tabla_TE.mp3",
     "drum": "Tabla"
   },
-  {
-    "english": "TEE",
-    "hindi": "",
-    "spoken": "Spoken_TEE.mp3",
-    "played": "Tabla_TEE.mp3",
-    "drum": "Tabla"
-  },
-
+  // {
+  //   "english": "TEE",
+  //   "hindi": "",
+  //   "spoken": "Spoken_TEE.mp3",
+  //   "played": "Tabla_TEE.mp3",
+  //   "drum": "Tabla"
+  // },
   {
     "english": "TI",
     "hindi": "",
