@@ -97,13 +97,11 @@ console.log("score Qu component");
 console.log(score);
 console.log(text);
 
-useEffect(() => {
-  if (text) {
-    let quSound = new Audio(`/Sounds/Tabla/${text[0].spoken}`)
-
-
-  }
-},[text])
+// useEffect(() => {
+//   if (text) {
+//     let quSound = new Audio(`/Sounds/Tabla/${text[0].spoken}`)
+//   }
+// },[text])
 
 const PlayQuSound = ()=>  {
     let quSound = new Audio(`/Sounds/Tabla/${text[0].played}`)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { DeflatTablaKeyFrame } from '../../../Animations/Scenes/DeflatTablaKeyFrame';
 import { SubmitButton } from './Button.styled';
 import { QuestionComp } from './Question';
@@ -11,6 +11,12 @@ function Wrong(score, level) {
     // makeQu()
     setShowQuestion(true);
   }
+
+
+  useEffect(() => {
+    let SoundWrong = new Audio("/Sounds/Results/Wrong_Tabla.mp3");
+    SoundWrong.play();
+  },[])
 
   console.log("score wrong component");
   console.log(score[1]);
