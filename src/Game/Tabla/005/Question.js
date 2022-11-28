@@ -106,7 +106,7 @@ useEffect(() => {
 },[text])
 
 const PlayQuSound = ()=>  {
-    let quSound = new Audio(`/Sounds/Tabla/${text[0].spoken}`)
+    let quSound = new Audio(`/Sounds/Tabla/${text[0].played}`)
       console.log("text");
       console.log(text[0].spoken);
       console.log("quSound");
@@ -134,10 +134,10 @@ return (
         <>
           {/* {score} {level} */}
           <Question>
-            {text[0].english}
+            {/* {text[0].english} */}
             <br/>
             <div  >
-              {text[0].spoken}
+              {/* {text[0].spoken} */}
             </div>
             {quSound ? (<p>Loading</p>) : (<button onClick={PlayQuSound}>Play</button>)}
 {/* <p>Play</p> */}
