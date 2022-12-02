@@ -5,6 +5,8 @@ import TablaData from "../TablaData";
 import Right from './Right';
 import Wrong from './Wrong';
 import { SubmitButton } from './Button.styled';
+import { TablaSet } from '../../../Animations/Scenes/TablaSet';
+import styled from 'styled-components';
 
 export const QuestionComp= () => {
   // const [showResults, setResults] = useState(false);
@@ -132,12 +134,13 @@ return (
         <>
           {/* {score} {level} */}
           <Question>
-            {text[0].english}
+            {/* {text[0].english} */}
             <br/>
             <div  >
               {/* {text[0].spoken} */}
             </div>
-            {quSound ? (<p>Loading</p>) : (<button onClick={PlayQuSound}>Play</button>)}
+
+            {quSound ? (<p>Loading</p>) : (<><PlayButton onClick={PlayQuSound}><TablaSet></TablaSet></PlayButton><p>Click the Tabla</p></>)}
 {/* <p>Play</p> */}
           </Question>
           <Opions>
@@ -157,7 +160,7 @@ return (
         {selected ? (
             <SubmitButton onClick={() => summit()}>Submit</SubmitButton>
           ) : (
-            <Submittext>Select The Letters that are the Same</Submittext>
+            <Submittext>Select The Letters that makes the sound played.</Submittext>
           )}
         </Submit>
       </>
@@ -169,3 +172,19 @@ return (
     </QuestionCard>
   )
 }
+const PlayButton = styled.button`
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color:  transparent;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /* padding: 1rem; */
+  border: none;
+  &:hover {
+        transform:  translateX(-5px) translateY(-5px);
+        box-shadow: 0 1rem 2rem rgba(white, .2);
+    }
+`;

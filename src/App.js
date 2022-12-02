@@ -25,7 +25,7 @@ import { Sounds } from './Pages/Sounds'
 const App = () => {
   return (
     <div>
-      <Header/>
+      {/* <Header/> */}
       <Switch>
         <Route path='/sounds'><Sounds/></Route>
         <Route path='/animations/hand'><ObjectHand/></Route>

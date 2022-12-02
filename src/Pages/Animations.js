@@ -55,7 +55,7 @@ const Frame = styled.div`
   /* border: 2px solid orange; */
   /* border-radius: 1.5rem; */
   /* margin: 2rem;÷ */
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
 `;

@@ -33,9 +33,9 @@ export const Opion = styled.li`
   /* margin: 1rem; */
   border: 3px solid green;
   color: ${(props) => props.variant === "true" ? " orange" : "green"};
-  font-size: clamp(1.5rem, 5vh, 5rem );
+  font-size: clamp(1.5rem, 5vh, 6rem );
   text-align: center;
-  padding: clamp(1rem, 10vh, 5rem );
+  padding: clamp(1rem, 10vh, 3rem );
 `;
 
 export const FinalResultsCard = styled.div`
