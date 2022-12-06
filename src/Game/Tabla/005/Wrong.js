@@ -31,7 +31,7 @@ function Wrong(score, level) {
         ) : (
           <Results>
             <AminationsFrame><DeflatTablaKeyFrame/></AminationsFrame>
-            {/* <ResultsText>Wrong</ResultsText> */}
+            <ResultsText>Try Again</ResultsText>
             <br/><br/><br/>
             <SubmitButton onClick={() => handleClick()}>New Question</SubmitButton>
           </Results>

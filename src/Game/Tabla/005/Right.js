@@ -25,7 +25,7 @@ function Right() {
         ) : (
           <Results>
             <AminationsFrame><PlayTablaKeyFrame/></AminationsFrame>
-            {/* <ResultsText>Right</ResultsText> */}
+            <ResultsText>Correct</ResultsText>
             <br/><br/>
             <SubmitButton onClick={() => handleClick()}>New Question</SubmitButton>
           </Results>
