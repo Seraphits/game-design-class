@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { QuestionComp } from './Question';
-import { Logo, LogoH3, PlayButton, SoundH1, SoundWord, SplashScreen, Tabla1, Tabla2, TablaH1, TablaPair, TablaWord } from './StartScreenTabla.styled';
+import { InfoButton, Logo, LogoH3, PlayButton, SoundH1, SoundWord, SplashScreen, Tabla1, Tabla2, TablaH1, TablaPair, TablaWord } from './StartScreenTabla.styled';
 // import { makeQu } from './MakeQu';
 // import TablaData from "../Data";
 // import TP from './img/tabla-pair.png';
@@ -46,7 +46,8 @@ export const StartScreenTabla = () => {
                   <SoundH1>Sounds</SoundH1>
               </SoundWord>
               <PlayButton>
-                  <StartGameButton onClick={ handleClick } >PLAY</StartGameButton>
+                  <StartGameButton onClick={ handleClick } >PLAY</StartGameButton><br/><br/>
+                  <InfoButton to="/games/tablainfo" >About This Game</InfoButton>
               </PlayButton>
           </SplashScreen>
         )

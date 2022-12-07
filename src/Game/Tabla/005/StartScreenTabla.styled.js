@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const SplashScreen = styled.div`
@@ -108,10 +109,13 @@ export const PlayButton = styled.div`
   grid-column: -1 / -3;
   margin: auto;
   @media  screen and (max-width: 700px) and (orientation: portrait) {
-      grid-row: -1 / -3;
-      grid-column: 1 / 9;
+    grid-row: -1 / -3;
+    grid-column: 1 / 9;
   }
 `;
-// export const SoundH1 = styled.link`
+export const InfoButton = styled(Link)`
+  color: white;
+  background: transparent;
+  margin: 2rem;
 
-// `;
+`;

@@ -14,6 +14,7 @@ import { TablaRefactor } from './Game/Tabla/002/TablaRefactor'
 import {TablaStyled} from './Game/Tabla/003'
 import {TablaAnimated} from './Game/Tabla/004'
 import {TablaSound} from './Game/Tabla/005'
+import { TablaInfo } from './Game/Tabla/005/TablaInfo'
 // import MemoryGamePage3 from './Game/Memory/003/MemoryGamePage'
 import Header from './Layout/Header'
 import AddingData from './Pages/AddingData'
@@ -37,6 +38,7 @@ const App = () => {
         <Route path='/games/tablastyled'><TablaStyled/></Route>
         <Route path='/games/tablarefactor'><TablaRefactor/></Route>
         <Route path='/games/tablarandom'><TablaRan/></Route>
+        <Route path='/games/tablainfo'><TablaInfo/></Route>
         <Route path='/games/tabla'><Tabla/></Route>
         <Route path='/games/floppybird'><FloppyBird/></Route>
         <Route path='/games/flashcards'><FlashCard/></Route>
