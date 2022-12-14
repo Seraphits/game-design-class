@@ -13,7 +13,8 @@ const AddingData = () => {
       </Grid>
       <h2>Adding Data test that are being worked on</h2>
       <Grid>
-        <Link to='/addingdata/GraphQL/001'>GraphQL 001</Link>
+        {/* <Link to='/addingdata/GraphQL/001'>GraphQL 001</Link> */}
+        <Link to='/addingdata/content/001'>Content 001</Link>
       </Grid>
     </Wrapper>
   )

@@ -17,9 +17,9 @@ const Header = () => {
         <ul>
           <NavLink to='/sounds'>Sounds</NavLink>
         </ul>
-        {/* <ul>
+        <ul>
           <NavLink to='/addingdata'>Data</NavLink>
-        </ul> */}
+        </ul>
       </nav>
     </div>
   )

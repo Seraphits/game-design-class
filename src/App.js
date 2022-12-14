@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { Content001 } from './AddingData/Content/001'
 import GraphQL001 from './AddingData/GraphQL/001'
 import { ObjectDagga } from './Animations/Objects/Dagga'
 import { ObjectHand } from './Animations/Objects/Hand'
@@ -26,8 +27,9 @@ import { Sounds } from './Pages/Sounds'
 const App = () => {
   return (
     <div>
-      {/* <Header/> */}
+      <Header/>
       <Switch>
+        <Route path='/addingdata/content/001'><Content001/></Route>
         <Route path='/sounds'><Sounds/></Route>
         <Route path='/animations/hand'><ObjectHand/></Route>
         <Route path='/animations/dagga'><ObjectDagga/></Route>
