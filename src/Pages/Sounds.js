@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+// import React, { useRef, useState } from 'react';
 // import Player from '../Game/Tabla/005/Player';
 // import TablaSounds from '../Game/Tabla/TablaSounds';
 
@@ -7,7 +7,7 @@ export const Sounds = () => {
   // const [isPlaying, setIsPlaying] = useState(false);
   // const [ currentSound, SetCurrentSound ] = useState(TablaSounds[0]);
 
-  const audioElem = useRef();
+  // const audioElem = useRef();
 
   return (
     <div>
