@@ -2,9 +2,9 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { Content001 } from './AddingData/Content/001'
 import GraphQL001 from './AddingData/GraphQL/001'
-import { ObjectDagga } from './Animations/Objects/Dagga'
-import { ObjectHand } from './Animations/Objects/Hand'
-import { ObjectTabla } from './Animations/Objects/Tabla'
+// import { ObjectDagga } from './Animations/Objects/Dagga'
+// import { ObjectHand } from './Animations/Objects/Hand'
+// import { ObjectTabla } from './Animations/Objects/Tabla'
 import FlashCard from './Game/FlashCards/001/FlashCardsPage'
 import FloppyBird from './Game/FloppyBird/001/FloppyBird'
 import MemoryGamePage from './Game/Memory/001/MemoryGamePage'
@@ -23,6 +23,8 @@ import { Animations } from './Pages/Animations'
 import GamesList from './Pages/GamesList'
 import Home from './Pages/Home'
 import { Sounds } from './Pages/Sounds'
+import { Assets } from './Pages/Assets'
+import { Buttons } from './UI/Buttons/Buttons'
 
 const App = () => {
   return (
@@ -31,10 +33,11 @@ const App = () => {
       <Switch>
         <Route path='/addingdata/content/001'><Content001/></Route>
         <Route path='/sounds'><Sounds/></Route>
-        <Route path='/animations/hand'><ObjectHand/></Route>
-        <Route path='/animations/dagga'><ObjectDagga/></Route>
-        <Route path='/animations/tabla'><ObjectTabla/></Route>
-        <Route path='/animations'><Animations/></Route>
+        {/* <Route path='/animations/hand'><ObjectHand/></Route>
+        <Route path='/animations/dagga'><ObjectDagga/></Route>*/}
+        <Route path='/assets/buttons'><Buttons/></Route>
+        <Route path='/assets/animations'><Animations/></Route>
+        <Route path='/assets'><Assets/></Route>
         <Route path='/games/tablasound'><TablaSound/></Route>
         <Route path='/games/tablaanimated'><TablaAnimated/></Route>
         <Route path='/games/tablastyled'><TablaStyled/></Route>
