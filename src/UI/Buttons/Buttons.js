@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Wrapper } from '../Utility'
 import Button from './Button'
+import {GoBell, GoCloudDownload, GoDatabase} from 'react-icons/go'
 
 export const Buttons = () => {
   return (
@@ -10,7 +11,7 @@ export const Buttons = () => {
         <div>
           <div>
             <p>name of button</p>
-            <Button primary>Button1</Button>
+            <Button primary><GoBell/>Button1</Button>
           </div>
           <div>
             <p>name of button</p>
@@ -44,7 +45,7 @@ export const Buttons = () => {
           </div>
           <div>
             <p>name of button</p>
-            <Button warning rounded>Button4</Button>
+            <Button warning rounded><GoCloudDownload/> Button4</Button>
           </div>
           <div>
             <p>name of button</p>
@@ -62,7 +63,7 @@ export const Buttons = () => {
           </div>
           <div>
             <p>name of button</p>
-            <Button  success outline>Button3</Button>
+            <Button  success outline><GoDatabase/> Button3</Button>
           </div>
           <div>
             <p>name of button</p>
