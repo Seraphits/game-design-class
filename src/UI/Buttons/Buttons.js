@@ -9,11 +9,11 @@ export const Buttons = () => {
       <Grid>
         <div>
           <p>name of button</p>
-          <Button>Button1</Button>
+          <Button primary>Button1</Button>
         </div>
         <div>
           <p>name of button</p>
-          <Button>Button2</Button>
+          <Button secondary>Button2</Button>
         </div>
         <div>
           <p>name of button</p>
