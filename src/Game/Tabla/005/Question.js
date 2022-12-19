@@ -16,7 +16,7 @@ export const QuestionComp= () => {
   const [correct, setCorrect] = useState();
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(0);
-  const [quSound, setQuSound] = useState();
+  const [quSound] = useState();
 
   // select card
   const optionClicked = (card) => {
