@@ -8,6 +8,8 @@ export const Assets = () => {
       <Grid>
         <Link to='/assets/animations'>Animations</Link>
         <Link to='/assets/buttons'>Buttons</Link>
+        <Link to='/assets/accordion'>Accordion</Link>
+
       </Grid>
     </div>
   )
