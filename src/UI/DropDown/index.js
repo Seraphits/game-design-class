@@ -19,7 +19,7 @@ export const DropDownPage = () => {
   return (
     <Wrapper>
       <h1>Dropdown</h1>
-      <DropDown options={options} selection={selection} onSelect={handleSelect} />
+      <DropDown options={options} value={selection} onChange={handleSelect} />
     </Wrapper>
   )
 }
