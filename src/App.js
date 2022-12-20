@@ -26,6 +26,7 @@ import { Sounds } from './Pages/Sounds'
 import { Assets } from './Pages/Assets'
 import { Buttons } from './UI/Buttons/Buttons'
 import { AccordionPage } from './UI/Accordion/Index'
+import { DropDownPage } from './UI/DropDown'
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
         <Route path='/sounds'><Sounds/></Route>
         {/* <Route path='/animations/hand'><ObjectHand/></Route>
         <Route path='/animations/dagga'><ObjectDagga/></Route>*/}
+        <Route path='/assets/dropdown'><DropDownPage/></Route>
         <Route path='/assets/buttons'><Buttons/></Route>
         <Route path='/assets/accordion'><AccordionPage/></Route>
         <Route path='/assets/animations'><Animations/></Route>
