@@ -10,6 +10,7 @@ export const Assets = () => {
         <Link to='/assets/buttons'>Buttons</Link>
         <Link to='/assets/accordion'>Accordion</Link>
         <Link to='/assets/dropdown'>DropDown</Link>
+        <Link to='/assets/modal'>Modal</Link>
 
       </Grid>
     </div>
