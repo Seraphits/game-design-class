@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../Tailwind.css'
 import { Grid, Wrapper } from '../Utility'
 import { DropDown } from './DropDown'
 

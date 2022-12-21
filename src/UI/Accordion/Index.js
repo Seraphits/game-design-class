@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Tailwind.css'
 import { Wrapper } from '../Utility'
 import { Accordion } from './Accordion'
 

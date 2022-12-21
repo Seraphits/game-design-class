@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Tailwind.css'
 import { Grid, Wrapper } from '../Utility'
 import Button from './Button'
 import {GoBell, GoCloudDownload, GoDatabase} from 'react-icons/go'
