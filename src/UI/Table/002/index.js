@@ -1,9 +1,9 @@
 import React from 'react'
-import '../Tailwind.css'
-import { Wrapper } from '../Utility'
+import '../../Tailwind.css'
+import { Wrapper } from '../../Utility'
 import { Table } from './table'
 
-export const TablePage = () => {
+export const TablePage002 = () => {
   const data = [
     { name:'Orange', color:'bg-orange-500', score: 5 },
     { name:'Apple', color:'bg-red-500', score: 3 },
@@ -12,7 +12,7 @@ export const TablePage = () => {
   ]
   return (
     <Wrapper>
-      <div>TablePage</div>
+      <h1>TablePage</h1> <br/>
       <Table data={data} />
     </Wrapper>
 
