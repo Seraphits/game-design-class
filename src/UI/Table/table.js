@@ -1,7 +1,18 @@
 import React from 'react'
 
-export const Table = () => {
+export const Table = ({ data }) => {
   return (
-    <div>table</div>
+    <div>
+      {data.length}
+     <table>
+      <thead>
+
+      </thead>
+      <tbody>
+
+      </tbody>
+     </table>
+
+    </div>
   )
 }
