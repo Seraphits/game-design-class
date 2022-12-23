@@ -25,3 +25,5 @@ export const Modal = ({onClose, children, actionBar}) => {
     document.querySelector('.modal-container')
   )
 }
+
+// Modern React with Redux [2023 Update] section 14 Creating Portals eith ReactDOM
