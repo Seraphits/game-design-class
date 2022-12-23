@@ -30,6 +30,7 @@ import { DropDownPage } from './UI/DropDown'
 import { ModalPage } from './UI/Modal'
 import { TablePage } from './UI/Table/001'
 import { TablePage002 } from './UI/Table/002'
+import { TablePage003 } from './UI/Table/003'
 
 
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
         <Route path='/sounds'><Sounds/></Route>
         {/* <Route path='/animations/hand'><ObjectHand/></Route>
         <Route path='/animations/dagga'><ObjectDagga/></Route>*/}
+        <Route path='/assets/table003'><TablePage003/></Route>
         <Route path='/assets/table002'><TablePage002/></Route>
         <Route path='/assets/table001'><TablePage/></Route>
         <Route path='/assets/modal'><ModalPage/></Route>

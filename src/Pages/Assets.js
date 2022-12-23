@@ -13,6 +13,7 @@ export const Assets = () => {
         <Link to='/assets/modal'>Modal</Link>
         <Link to='/assets/table001'>Table 001</Link>
         <Link to='/assets/table002'>Table 002</Link>
+        <Link to='/assets/table003'>Table 003</Link>
 
       </Grid>
     </div>
