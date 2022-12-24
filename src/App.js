@@ -31,6 +31,9 @@ import { ModalPage } from './UI/Modal'
 import { TablePage } from './UI/Table/001'
 import { TablePage002 } from './UI/Table/002'
 import { TablePage003 } from './UI/Table/003'
+import { TablePage004 } from './UI/Table/004'
+import { CounterPage } from './UI/Counter/001'
+import { CounterPage002 } from './UI/Counter/002'
 
 
 const App = () => {
@@ -42,6 +45,9 @@ const App = () => {
         <Route path='/sounds'><Sounds/></Route>
         {/* <Route path='/animations/hand'><ObjectHand/></Route>
         <Route path='/animations/dagga'><ObjectDagga/></Route>*/}
+        <Route path='/assets/counter002'><CounterPage002 initialCount={10} /></Route>
+        <Route path='/assets/counter001'><CounterPage initialCount={10} /></Route>
+        <Route path='/assets/table004'><TablePage004/></Route>
         <Route path='/assets/table003'><TablePage003/></Route>
         <Route path='/assets/table002'><TablePage002/></Route>
         <Route path='/assets/table001'><TablePage/></Route>
