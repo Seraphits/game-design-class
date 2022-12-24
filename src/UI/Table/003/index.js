@@ -1,7 +1,8 @@
 import React from 'react'
 import '../../Tailwind.css'
 import { Wrapper } from '../../Utility'
-import { Table } from './table'
+import { SortableTable } from './SortableTable';
+// import { Table } from './table'
 
 export const TablePage003 = () => {
   const data = [
@@ -13,7 +14,8 @@ export const TablePage003 = () => {
   const config = [
     {
       label: 'Name',
-      render: (fruit) => fruit.name
+      render: (fruit) => fruit.name,
+      sortValue: (fruit) => fruit.name,
     },
     {
       label: 'Color',
@@ -22,7 +24,9 @@ export const TablePage003 = () => {
     {
       label: 'Score',
       render: (fruit) => fruit.score,
-      header: () => <th className='bg-red-500' >Score</th>
+      // header: () => <th className='bg-red-500' >Score</th>
+      sortValue: (fruit) => fruit.score,
+      // header: () => <th onclick={DOSORT()}>Score</th>
     },
     {
       label: 'Score X 2',
@@ -37,7 +41,8 @@ export const TablePage003 = () => {
   return (
     <Wrapper>
       <h1>TablePage</h1> <br/>
-      <Table data={data} config={config} keyFn={keyFn} />
+      {/* <Table data={data} config={config} keyFn={keyFn} /> */}
+      <SortableTable data={data} config={config} keyFn={keyFn} />
     </Wrapper>
 
   )
