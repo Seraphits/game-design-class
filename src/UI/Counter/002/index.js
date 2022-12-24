@@ -1,21 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Wrapper } from '../../Utility';
 import Button from '../../Buttons/Button'
+import useCounter from './useCounter';
+
+
 
 export const CounterPage002 = ( {initialCount} ) => {
-  const [count, setCount] = useState(initialCount);
-  useEffect(() => {
-    console.log(count);
-  }, [count]);
-
-  const handleClick = () => {
-    setCount(count + 1)
-  }
+  const {count, increment } = useCounter(initialCount);
 
   return (
-    <Wrapper>CounterPage
+    <Wrapper>CounterPage 002
      <h1>Count is {count}</h1>
-    <Button onClick={handleClick } >Add 1</Button>
+    <Button onClick={ increment  } >Add 1</Button>
     </Wrapper>
   )
 }
