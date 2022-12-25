@@ -4,21 +4,35 @@ import Button from '../../Buttons/Button'
 import { Panel } from '../../BuildingBlocks/Panel';
 
 const INCREMENT_COUNT = 'increment' ;
+const DECREMENT_COUNT = 'decrement' ;
 const SET_ADD_VALUE = 'change-add-value';
+const ADD_VALUE_TO_COUNT = 'add-value-to-count';
 
 const reducer = (state, action) => {
-  if (action.type === INCREMENT_COUNT) {
-     return {
-      ...state,
-      count: state.count + 1
-    }
-  }
-
-  if (action.type === SET_ADD_VALUE) {
-    return {
-      ...state,
-      valueToAdd: action.payload
-    }
+  switch (action.type) {
+    case INCREMENT_COUNT:
+      return {
+        ...state,
+        count: state.count + 1
+      }
+      case DECREMENT_COUNT:
+        return {
+          ...state,
+          count: state.count - 1
+        }
+    case  SET_ADD_VALUE:
+      return {
+        ...state,
+        valueToAdd: action.payload
+      }
+    case  ADD_VALUE_TO_COUNT:
+      return {
+        ...state,
+        count: state.count + state.valueToAdd,
+        valueToAdd: 0
+      }
+    default:
+      throw new Error('unexpected action type: ' + action.type)
   }
 
   return state;
@@ -40,7 +54,9 @@ export const CounterPage004 = ( {initialCount} ) => {
   }
 
   const deccrement = () => {
-    // setCount(count - 1 );
+    dispatch({
+      type: DECREMENT_COUNT,
+    })
   }
 
   const handleChange = (event) => {
@@ -56,6 +72,10 @@ export const CounterPage004 = ( {initialCount} ) => {
     event.preventDefault();
     // setCount(count + valueToAdd);
     // setValueToAdd(0);
+    dispatch({
+      type: ADD_VALUE_TO_COUNT,
+    })
+
   }
 
   return (
