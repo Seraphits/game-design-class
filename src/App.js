@@ -31,6 +31,7 @@ import { TablePage004 } from './UI/Table/004'
 import { CounterPage } from './UI/Counter/001'
 import { CounterPage002 } from './UI/Counter/002'
 import { CounterPage003 } from './UI/Counter/003'
+import { CounterPage004 } from './UI/Counter/004'
 
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
         <Route path='/sounds'><Sounds/></Route>
         {/* <Route path='/animations/hand'><ObjectHand/></Route>
         <Route path='/animations/dagga'><ObjectDagga/></Route>*/}
+        <Route path='/assets/counter003'><CounterPage004 initialCount={10} /></Route>
         <Route path='/assets/counter003'><CounterPage003 initialCount={10} /></Route>
         <Route path='/assets/counter002'><CounterPage002 initialCount={10} /></Route>
         <Route path='/assets/counter001'><CounterPage initialCount={10} /></Route>
