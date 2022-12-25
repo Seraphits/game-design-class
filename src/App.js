@@ -2,9 +2,6 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { Content001 } from './AddingData/Content/001'
 import GraphQL001 from './AddingData/GraphQL/001'
-// import { ObjectDagga } from './Animations/Objects/Dagga'
-// import { ObjectHand } from './Animations/Objects/Hand'
-// import { ObjectTabla } from './Animations/Objects/Tabla'
 import FlashCard from './Game/FlashCards/001/FlashCardsPage'
 import FloppyBird from './Game/FloppyBird/001/FloppyBird'
 import MemoryGamePage from './Game/Memory/001/MemoryGamePage'
@@ -16,7 +13,6 @@ import {TablaStyled} from './Game/Tabla/003'
 import {TablaAnimated} from './Game/Tabla/004'
 import {TablaSound} from './Game/Tabla/005'
 import { TablaInfo } from './Game/Tabla/005/TablaInfo'
-// import MemoryGamePage3 from './Game/Memory/003/MemoryGamePage'
 import Header from './Layout/Header'
 import AddingData from './Pages/AddingData'
 import { Animations } from './Pages/Animations'
@@ -34,6 +30,7 @@ import { TablePage003 } from './UI/Table/003'
 import { TablePage004 } from './UI/Table/004'
 import { CounterPage } from './UI/Counter/001'
 import { CounterPage002 } from './UI/Counter/002'
+import { CounterPage003 } from './UI/Counter/003'
 
 
 const App = () => {
@@ -45,6 +42,7 @@ const App = () => {
         <Route path='/sounds'><Sounds/></Route>
         {/* <Route path='/animations/hand'><ObjectHand/></Route>
         <Route path='/animations/dagga'><ObjectDagga/></Route>*/}
+        <Route path='/assets/counter003'><CounterPage003 initialCount={10} /></Route>
         <Route path='/assets/counter002'><CounterPage002 initialCount={10} /></Route>
         <Route path='/assets/counter001'><CounterPage initialCount={10} /></Route>
         <Route path='/assets/table004'><TablePage004/></Route>

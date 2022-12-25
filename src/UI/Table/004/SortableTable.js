@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { GoArrowSmallDown, GoArrowSmallUp } from 'react-icons/go'
 import { Table } from './table'
-import useSort from '../../Counter/002/useSort'
+import useSort from './useSort'
 
 export const SortableTable = (props) => {
   const { config, data } = props;
