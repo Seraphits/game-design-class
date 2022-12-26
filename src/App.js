@@ -33,6 +33,7 @@ import { CounterPage002 } from './UI/Counter/002'
 import { CounterPage003 } from './UI/Counter/003'
 import { CounterPage004 } from './UI/Counter/004'
 import { CounterPage005 } from './UI/Counter/005'
+import { PlayList001 } from './AddingData/PlayList/001'
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
     <div>
       <Header/>
       <Switch>
+        <Route path='/addingdata/playlist/001'><PlayList001/></Route>
         <Route path='/addingdata/content/001'><Content001/></Route>
         <Route path='/sounds'><Sounds/></Route>
         {/* <Route path='/animations/hand'><ObjectHand/></Route>
