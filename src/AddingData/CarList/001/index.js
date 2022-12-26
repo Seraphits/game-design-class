@@ -1,10 +1,10 @@
 import React from 'react'
 import { Wrapper } from '../../../UI/Utility'
 
-export const PlayList001 = () => {
+export const CarList001 = () => {
   return (
     <Wrapper>
-      PlayList001
+      Car List 001
 
     </Wrapper>
   )

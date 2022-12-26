@@ -20,7 +20,6 @@ export const Assets = () => {
         <Link to='/assets/counter003'>Counter 003</Link>
         <Link to='/assets/counter004'>Counter 004</Link>
         <Link to='/assets/counter005'>Counter 005</Link>
-        <Link to='/addingdata/playlist/001'>PlayList 001</Link>
 
       </Grid>
     </div>
