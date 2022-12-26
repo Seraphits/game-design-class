@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react'
+import produce from 'immer'
 import { Wrapper } from '../../Utility';
 import Button from '../../Buttons/Button'
 import { Panel } from '../../BuildingBlocks/Panel';
@@ -11,36 +12,28 @@ const ADD_VALUE_TO_COUNT = 'add-value-to-count';
 const reducer = (state, action) => {
   switch (action.type) {
     case INCREMENT_COUNT:
-      return {
-        ...state,
-        count: state.count + 1
-      }
-      case DECREMENT_COUNT:
-        return {
-          ...state,
-          count: state.count - 1
-        }
+      state.count = state.count + 1;
+      return;
+    case DECREMENT_COUNT:
+      state.count =state.count - 1;
+      return;
     case  SET_ADD_VALUE:
-      return {
-        ...state,
-        valueToAdd: action.payload
-      }
+      state.valueToAdd = action.payload;
+      return;
     case  ADD_VALUE_TO_COUNT:
-      return {
-        ...state,
-        count: state.count + state.valueToAdd,
-        valueToAdd: 0
-      }
+      state.count = state.count + state.valueToAdd;
+      state.valueToAdd = 0;
+      return;
     default:
       throw new Error('unexpected action type: ' + action.type)
   }
 }
 
 
-export const CounterPage004 = ( {initialCount} ) => {
+export const CounterPage005 = ( {initialCount} ) => {
   // const [count, setCount] = useState(initialCount);
   // const [valueToAdd, setValueToAdd] = useState(0);
-  const [state, dispatch] = useReducer(reducer, {
+  const [state, dispatch] = useReducer(produce(reducer), {
     count: initialCount,
     valueToAdd: 0
   })
@@ -77,7 +70,7 @@ export const CounterPage004 = ( {initialCount} ) => {
   }
 
   return (
-    <Wrapper><h1>CounterPage 004</h1> <br/>
+    <Wrapper><h1>CounterPage 005</h1> <br/>
       <Panel className='m-3' >
      <p className='text-lg'>Count is {state.count}</p>
      <div className='flex flex-row'>
