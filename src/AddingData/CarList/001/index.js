@@ -4,13 +4,14 @@ import { CarForm } from './CarForm'
 import { CarList } from './CarList'
 import { CarSearch } from './CarSearch'
 import { CarValue } from './CarValue'
+import './styles.css'
 
 export const CarList001 = () => {
   return (
     <Wrapper>
       <CarForm/>
-      <CarList/>
       <CarSearch/>
+      <CarList/>
       <CarValue/>
     </Wrapper>
   )
