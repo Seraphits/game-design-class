@@ -29,3 +29,5 @@ export const Modal = ({onClose, children, actionBar}) => {
 // Modern React with Redux [2023 Update] section 14 Creating Portals eith ReactDOM
 
 // Make sure to add div to index.html
+
+// https://www.youtube.com/watch?v=xSWkArLGkR4  use to help with typescript
