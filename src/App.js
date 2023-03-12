@@ -34,6 +34,7 @@ import { CounterPage003 } from './UI/Counter/003'
 import { CounterPage004 } from './UI/Counter/004'
 import { CounterPage005 } from './UI/Counter/005'
 import { CarList001 } from './AddingData/CarList/001'
+import { TablaGraghQL } from './Game/Tabla/006'
 
 
 const App = () => {
@@ -61,6 +62,7 @@ const App = () => {
         <Route path='/assets/accordion'><AccordionPage/></Route>
         <Route path='/assets/animations'><Animations/></Route>
         <Route path='/assets'><Assets/></Route>
+        <Route path='/games/tablagraphql'><TablaGraghQL/></Route>
         <Route path='/games/tablasound'><TablaSound/></Route>
         <Route path='/games/tablaanimated'><TablaAnimated/></Route>
         <Route path='/games/tablastyled'><TablaStyled/></Route>

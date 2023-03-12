@@ -15,6 +15,7 @@ const GamesList = () => {
       </Grid>
       <h2>Game test that are being worked on</h2>
       <Grid>
+        <Link to='/games/tablagraphql'>TablaGraghQL</Link>
         <Link to='/games/tablasound'>TablaSound</Link>
         <Link to='/games/tablaanimated'>TablaAnimated</Link>
         <Link to='/games/tablastyled'>TablaStyled</Link>
